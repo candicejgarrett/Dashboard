@@ -1,4 +1,0 @@
-[23-Aug-2018 15:21:55 America/New_York] PHP Notice:  Undefined index: CKEditor in /home/candicejgarrett/public_html/dashboard/knowledge-center/uploader/upload.php on line 31
-[23-Aug-2018 15:21:55 America/New_York] PHP Notice:  Undefined index: CKEditorFuncNum in /home/candicejgarrett/public_html/dashboard/knowledge-center/uploader/upload.php on line 33
-[23-Aug-2018 15:21:55 America/New_York] PHP Notice:  Undefined index: langCode in /home/candicejgarrett/public_html/dashboard/knowledge-center/uploader/upload.php on line 35
-[23-Aug-2018 15:21:55 America/New_York] PHP Strict Standards:  Only variables should be passed by reference in /home/candicejgarrett/public_html/dashboard/knowledge-center/uploader/upload.php on line 51
