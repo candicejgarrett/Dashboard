@@ -390,16 +390,16 @@ function getNewsfeed($newsfeedCount,$thisUserID) {
 	if ($thisUserID != 0) {
 		
 		if ($thisUserID != $userID) {
-			$getLatestActivity = "SELECT DISTINCT `ActivityID`,`Activity`, DATE_FORMAT(`Timestamp`, '%l:%i %p %b %e, %Y'), `Activity Feed`.`ProjectID`,`EventID`,`PostID`,`TaskID`,`ReviewID`,`lhnID`,`meganavID`,`Activity Feed`.`TicketID`,`Type`,`Activity Feed`.`userID`,`Timestamp` FROM `Activity Feed` WHERE `Activity Feed`.`ActivityID` NOT IN(SELECT DISTINCT `ActivityID` FROM `Activity Feed` JOIN `Team Projects` on `Team Projects`.`ProjectID` = `Activity Feed`.`ProjectID` WHERE `Activity Feed`.`ProjectID`!= '' AND `Team Projects`.`Visible` = 'Private' ) AND `Activity Feed`.`userID` = '$thisUserID' ORDER BY `ActivityID` DESC LIMIT $newsfeedCount";
+			$getLatestActivity = "SELECT DISTINCT `ActivityID`,`Activity`, DATE_FORMAT(`Timestamp`, '%l:%i %p %b %e, %Y'), `Activity Feed`.`ProjectID`,`EventID`,`PostID`,`TaskID`,`ReviewID`,`Activity Feed`.`TicketID`,`Type`,`Activity Feed`.`userID`,`Timestamp` FROM `Activity Feed` WHERE `Activity Feed`.`ActivityID` NOT IN(SELECT DISTINCT `ActivityID` FROM `Activity Feed` JOIN `Team Projects` on `Team Projects`.`ProjectID` = `Activity Feed`.`ProjectID` WHERE `Activity Feed`.`ProjectID`!= '' AND `Team Projects`.`Visible` = 'Private' ) AND `Activity Feed`.`userID` = '$thisUserID' ORDER BY `ActivityID` DESC LIMIT $newsfeedCount";
 		}
 		else {
 			
-		$getLatestActivity = "SELECT DISTINCT `ActivityID`,`Activity`, DATE_FORMAT(`Timestamp`, '%l:%i %p %b %e, %Y'), `Activity Feed`.`ProjectID`,`EventID`,`PostID`,`TaskID`,`ReviewID`,`lhnID`,`meganavID`,`Activity Feed`.`TicketID`,`Type`,`Activity Feed`.`userID`,`Timestamp` FROM `Activity Feed` WHERE `Activity Feed`.`userID` = '$userID' ORDER BY `ActivityID` DESC LIMIT $newsfeedCount";
+		$getLatestActivity = "SELECT DISTINCT `ActivityID`,`Activity`, DATE_FORMAT(`Timestamp`, '%l:%i %p %b %e, %Y'), `Activity Feed`.`ProjectID`,`EventID`,`PostID`,`TaskID`,`ReviewID`,`Activity Feed`.`TicketID`,`Type`,`Activity Feed`.`userID`,`Timestamp` FROM `Activity Feed` WHERE `Activity Feed`.`userID` = '$userID' ORDER BY `ActivityID` DESC LIMIT $newsfeedCount";
 		}
 		
 	}
 	else {
-		$getLatestActivity = "SELECT DISTINCT `ActivityID`,`Activity`, DATE_FORMAT(`Timestamp`, '%l:%i %p %b %e, %Y'), `Activity Feed`.`ProjectID`,`EventID`,`PostID`,`TaskID`,`ReviewID`,`lhnID`,`meganavID`,`Activity Feed`.`TicketID`,`Type`,`Activity Feed`.`userID`,`Timestamp` FROM `Activity Feed` WHERE `Activity Feed`.`ActivityID` NOT IN(SELECT DISTINCT `ActivityID` FROM `Activity Feed` JOIN `Team Projects` on `Team Projects`.`ProjectID` = `Activity Feed`.`ProjectID` WHERE `Activity Feed`.`ProjectID`!= '' AND `Team Projects`.`Visible` = 'Private' ) ORDER BY `ActivityID` DESC LIMIT $newsfeedCount";
+		$getLatestActivity = "SELECT DISTINCT `ActivityID`,`Activity`, DATE_FORMAT(`Timestamp`, '%l:%i %p %b %e, %Y'), `Activity Feed`.`ProjectID`,`EventID`,`PostID`,`TaskID`,`ReviewID`,`Activity Feed`.`TicketID`,`Type`,`Activity Feed`.`userID`,`Timestamp` FROM `Activity Feed` WHERE `Activity Feed`.`ActivityID` NOT IN(SELECT DISTINCT `ActivityID` FROM `Activity Feed` JOIN `Team Projects` on `Team Projects`.`ProjectID` = `Activity Feed`.`ProjectID` WHERE `Activity Feed`.`ProjectID`!= '' AND `Team Projects`.`Visible` = 'Private' ) ORDER BY `ActivityID` DESC LIMIT $newsfeedCount";
 	}
 	
 	
@@ -416,8 +416,6 @@ function getNewsfeed($newsfeedCount,$thisUserID) {
 						$eventID = $row["EventID"];
 						$ReviewID = $row["ReviewID"];
 						$ticketID = $row["TicketID"];
-						$lhnID = $row["lhnID"];
-						$meganavID = $row["meganavID"];
 						$Timestamp = $row["DATE_FORMAT(`Timestamp`, '%l:%i %p %b %e, %Y')"];
 						$Activity = $row["Activity"];
 						
