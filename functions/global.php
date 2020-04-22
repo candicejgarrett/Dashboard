@@ -18,7 +18,7 @@ function getUserInfo($userID) {
 	`Last Active`, 
 	`Groups`.`Group Name`, 
 	`Group Color`,
-	`Group Membership`.`GroupID` 
+	`Group Membership`.`GroupID`  
 	FROM `user` 
 	JOIN `Group Membership` ON `user`.`userID`=`Group Membership`.`userID` 
 	JOIN `Groups` ON `Groups`.`GroupID`=`Group Membership`.`GroupID` 
