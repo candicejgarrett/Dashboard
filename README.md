@@ -7,5 +7,7 @@
 <br><br>
 <strong>Description:</strong> In response to a growing need for workflow management and transparent communication, I took the initiative to create a personalized workflow management tool for my current employer. It is entirely customizable, and built from the ground up.
 <br><br>
+<strong>Built Using:</strong> HTML5, CSS3/SASS, Bootstrap, JQuery/JS, and PHP/MySQL.
+<br><br>
 <p align="center">Dashboard Preview
 <img src="https://www.candicejgarrett.com/img/db-projects.png"></p>
