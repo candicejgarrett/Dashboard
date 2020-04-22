@@ -47,7 +47,12 @@ $(document).ready(function() {
 		loadTeamProfile();
 });
 </script>
-   
+  <style>
+		
+	  .gradient {
+		  padding:20px 0px;
+	  }
+		</style> 
     </head>
 
     <body>
@@ -79,25 +84,25 @@ $(document).ready(function() {
 					</div>
 					<div class="row">
    	 				<div class="col-sm-3">
-    	 					<div class="blueGradient text-center">
+    	 					<div class="gradient text-center">
 								<h3 class="text-center" style="margin-top: 5px;">Total<br>Members</h3>
 								<h1 class="myProfileCompleted" id="printTotalMembers"></h1>
    	 						</div>
     	 				</div>
     	 				<div class="col-sm-3">
-    	 					<div class="blueGradient text-center">
+    	 					<div class="gradient text-center">
 								<h3 class="text-center" style="margin-top: 5px;">Open<br>Projects</h3>
 								<h1 class="myProfileCompleted" id="printOpenProjects"></h1>
    	 						</div>
     	 				</div>
     	 				<div class="col-sm-3">
-    	 					<div class="blueGradient text-center">
+    	 					<div class="gradient text-center">
 								<h3 class="text-center" style="margin-top: 5px;">Completed<br>Projects</h3>
 								<h1 class="myProfileCompleted" id="printCompletedProjects"></h1>
    	 						</div>
     	 				</div>
     	 				<div class="col-sm-3">
-    	 					<div class="blueGradient text-center">
+    	 					<div class="gradient text-center">
 								<h3 class="text-center" style="margin-top: 5px;">Total<br>Projects</h3>
 								<h1 class="myProfileCompleted" id="printTotalProjects"></h1>
    	 						</div>

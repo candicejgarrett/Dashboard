@@ -136,7 +136,7 @@ $(document).ready(function() {
 					}
 					
 					//
-					applyFilter();
+					//applyFilter();
 					
 				}
 				});
@@ -156,18 +156,18 @@ $(document).ready(function() {
 				
 				
 					$("#allTickets").html(results.printTickets);
-					$('.individualTickets .ticketStatus:not(:contains("Incomplete"))').parent().hide();
+					//$('.individualTickets .ticketStatus').parent().hide();
 					
 					var appliedFilter = $('.filterBlock.active').attr("id");
 					
 					if (appliedFilter === undefined) {
-						$('.individualTickets .ticketStatus:not(:contains("Incomplete"))').parent().hide();
+						//$('.individualTickets .ticketStatus').parent().hide();
 						}
 					else {
 						$('.individualTickets .ticketStatus:not(:contains("'+appliedFilter+'"))').parent().hide();
 					}
 					
-					applyFilter();
+					//applyFilter();
 					
 				}
 				});
@@ -494,7 +494,7 @@ $(document).ready(function() {
 							<div class="row">
 								<div class="col-sm-3">
 									<div class="background ticketSide" style="height: 1170px;">
-									<input type="text" id="searchTickets" placeholder="Ticket Title" style="background:none;border:1px solid #ffffff !important;color:#ffffff !important;">
+									<input type="text" id="searchTickets" placeholder="Ticket Title" style="background:none !important;border:1px solid #ffffff !important;color:#ffffff !important;">
 									
 									<div id="filters">
 										<div class="showFilters">Filter By Status</div>

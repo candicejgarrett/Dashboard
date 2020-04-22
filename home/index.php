@@ -153,7 +153,7 @@ require('../connect.php');
 			
 		   
      	 	<div class="whitebg" id="upcomingEvents">
-    	 		<div class="header" style="margin-bottom: 0px;"><h3>Web Content Events</h3></div><br>
+    	 		<div class="header" style="margin-bottom: 0px;"><h3>Events</h3></div><br>
 							<div id='calendar' style="padding: 10px;"></div> 
 					
     	 		

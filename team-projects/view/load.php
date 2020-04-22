@@ -42,6 +42,7 @@ if(isset($projectSelector)){
 	if (isset($ContactName)) {
 		
 		$ticketAvailable = '<div class="col-sm-12">
+		<hr>
       				<p></p><div class="formLabels">Ticket:</div>
 					<em><a href="/dashboard/requests/view/?ticketID='.$ticketID.'">'.$ticketTitle.'</a></em><br>
 					<em>Requested by '.$ContactName.'

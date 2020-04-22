@@ -425,15 +425,6 @@ function getNewsfeed($newsfeedCount,$thisUserID) {
 						$WhoPP = $row["userPPLink"];
 						$WhoUsername = $row["userUsername"];
 						
-						//$getUserInfo = "SELECT * FROM `user` WHERE `userID` = '$who'";
-						//$getUserInfo_result = mysqli_query($connection, $getUserInfo) or die ("getUserInfo to get data from Team Project failed: ".mysql_error());
-						//while($row = $getUserInfo_result->fetch_assoc()) {	
-						//	$WhoFN = $row["First Name"]." ".$row["Last Name"];
-						//	$WhoPP = $row["PP Link"];
-						//	$WhoUsername = $row["username"];
-						//}
-						
-						
 						$links;
 						$moreInformation;
 						$removeThis = '';
