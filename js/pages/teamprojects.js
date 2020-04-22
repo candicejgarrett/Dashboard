@@ -199,7 +199,7 @@ function checkForNewPercentage() {
 								data: {'project':projectID},
 								cache: false,
 								success: function(results){
-		
+								
 					$(".working").fadeOut(); 
 					$("#printProjectCreatedByTop").html(results.printProjectCreatedBy);
 					$("#projectCreatedByPP").attr("src",results.projectCreatedByPP);
@@ -210,7 +210,6 @@ function checkForNewPercentage() {
 					$("#printProjectDescription").html(results.printProjectDescription);
 					$("#copyLinkInput").val(window.location.href);
 					$("#printProjectCopy").html(results.printProjectCopy);
-					CKEDITOR.instances.requestCopyEdit.setData(''+results.printProjectCopy+'');
 					$("#printProjectCreatedBy").html(results.printProjectCreatedBy);
 					$("#printVisible").html(results.printVisible);
 					$("#printMembers").html(results.printMembers);
@@ -284,7 +283,7 @@ function checkForNewPercentage() {
 					
 					
 					if (!results.printProjectTitle) {
-						window.location.href = "404.php";
+						//window.location.href = "404.php";
 					}
 					setTimeout(function(){
 					$(".projectLoad").show();	
@@ -1408,7 +1407,8 @@ $(".progressBar").hide();
 	});	
 // editing copy
 	$(document).on('click','#addNewCopy-btn', function() {
-			
+		var copy = $("#printProjectCopy").html();
+			CKEDITOR.instances.requestCopyEdit.setData(''+copy+'');
 		$("#printProjectCopy").parent().toggleClass("make100");
 		$(".hiding").slideToggle();	
 	});

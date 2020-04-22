@@ -4,23 +4,25 @@
         session_start();
     } 
 
-$connection = mysqli_connect('127.0.0.1', 'garrettc1', 'Welcome1!');
+$connection = mysqli_connect('127.0.0.1', 'root', 'newpassword');
 date_default_timezone_set('America/New_York');
 
 
 if (!$connection){
     die("Database Connection Failed" . mysqli_error($connection));
+	echo "failed db connection";
 }
 $select_db = mysqli_select_db($connection, 'dashboard');
 if (!$select_db){
     die("Database Selection Failed" . mysqli_error($connection));
+	echo "failed db connection";
 }
 
 
 //PDO
 $servername = "127.0.0.1";
-$serverusername = "garrettc1";
-$serverpassword = "Welcome1!";
+$serverusername = "root";
+$serverpassword = "newpassword";
 $dbname = "dashboard";
 
 

@@ -116,15 +116,15 @@ if(isset($projectSelector)){
 	 while($row = $getAllTaskCount_result->fetch_assoc()) {
 		 $totalCount = $row["COUNT(`TaskID`)"];
 	 }
-		
-		$myTaskpercentage = round(($completedCount/$totalCount) * 100,0);
-		
-		if ($completedCount == 0 && $totalCount == 0) {
+		if ($totalCount == 0) {
 			$width = 0;
 		}
 		else {
+			$myTaskpercentage = round(($completedCount/$totalCount) * 100,0);
 			$width = $myTaskpercentage;
 		}
+		
+		
 		
 		$printMembers[] = "<div class='row'><div class='col-sm-3' style='padding-right: 0px;'><div class='projectMember $disable' id='$memberID'><img class='profilePicMembers' src='".$memberPic."'/><p>$memberUsername</p></div></div><div class='col-sm-8' style='padding-right: 0px;'><div class='memberTaskCount'>$completedCount/$totalCount</div><div class='progressBar-container'><div class='progressBar' style='width:".$width."%'></div></div></div></div><br>";  // or $row if you want whole row
 		//GETTING ASSIGNED TO DROPDOWN
@@ -575,7 +575,7 @@ if(isset($projectSelector)){
 		$reviewIDArray[] = $row["ReviewID"];;
 	}	
 	
-	if (count($reviewIDArray) == 0) {
+	if (empty($reviewIDArray)) {
 		$getActivity = "SELECT `ActivityID`,DATE_FORMAT(`Timestamp`, '%l:%i %p %b %e, %Y'), `userID`, `Activity` FROM `Activity Feed` WHERE `ProjectID` = '$printProjectID' ORDER BY `ActivityID` ASC";
 	}
 	else {

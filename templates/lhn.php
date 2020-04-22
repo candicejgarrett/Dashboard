@@ -1,7 +1,17 @@
 <?php
 
 //USER CARD
-$userInfo = '<a href="/dashboard/users/my-profile/" class="myInfo"><img class="profilePic group_'.$groupName.'" src="'.$ProfilePic.'" id="userDetermination"/></a><strong>'.$FN.' '.$LN.'</strong><br><em>'.$Title.'</em><br><a href="/dashboard/users/teams/?team='.$groupName.'"><div class="directory" style="font-weight: bold; position: relative;background:'.$groupColor.' !important">'.$groupName.' Team</div></a>';
+$userInfo = '
+<a href="/dashboard/users/my-profile/" class="myInfo">
+	<img class="profilePic group_'.$groupName.'" src="'.$ProfilePic.'" id="userDetermination"/>
+</a>
+<strong>'.$FN.' '.$LN.'</strong>
+<br>
+<em>'.$Title.'</em>
+<br>
+<a href="/dashboard/users/teams/?team='.$groupName.'">
+	<div class="directory" style="font-weight: bold; position: relative;background:'.$groupColor.' !important">'.$groupName.' Team</div>
+</a>';
 
 
 //GETTING COUNTS
@@ -81,33 +91,7 @@ if ($myAssignedTasksCount == 0) {
 }
 
 
-$getOpenLHNCount = "SELECT COUNT(*) FROM `Live LHNs` WHERE `Status` = 'Approved'";
-	$getOpenLHNCount_result = mysqli_query($connection, $getOpenLHNCount) or die ("getProjectCount Query to get data from Team Project failed: ".mysql_error());
-	
-        $row_count= $getOpenLHNCount_result->num_rows;
- 		$row = $getOpenLHNCount_result->fetch_assoc();
-		$openLHN =$row['COUNT(*)'];
-		if ($openLHN == 0) {
-			$finalOpenLHNCount ="";
-		}
-		else {
-			$finalOpenLHNCount = "<span class='requestsCount'>".$openLHN."</span>";
-		}
-
-$getOpenMegaNavCount = "SELECT COUNT(*) FROM `Live MegaNavs` WHERE `Status` = 'Approved'";
-	$getOpenMegaNavCount_result = mysqli_query($connection, $getOpenMegaNavCount) or die ("getProjectCount Query to get data from Team Project failed: ".mysql_error());
-	
-        $row_count= $getOpenMegaNavCount_result->num_rows;
- 		$row = $getOpenMegaNavCount_result->fetch_assoc();
-		$openMegaNav =$row['COUNT(*)'];
-		if ($openMegaNav == 0) {
-			$finalOpenMegaNavCount ="";
-		}
-		else {
-			$finalOpenMegaNavCount = "<span class='requestsCount'>".$openMegaNav."</span>";
-		}
-
-$totalRequestCounts = $openLHN + $openMegaNav + $openRequests;
+$totalRequestCounts = $openRequests;
 
 if ($totalRequestCounts == 0) {
 			$finalTotalRequestCounts ="";
@@ -186,16 +170,6 @@ if ($myRole === "Admin") {
 			<tr class='lhnDropdownMenu' controlledby='requestsDropdown'>
 				<td class='link'>
 					<a href='/dashboard/requests/my-requests'><i class='fa fa-ticket' aria-hidden='true'></i>&nbsp;&nbsp; My Tickets</a>
-				</td>
-			</tr>
-			<tr class='lhnDropdownMenu' controlledby='requestsDropdown'>
-				<td class='link'>
-					<a href='/dashboard/requests/lhn'><i class='fa fa-link' aria-hidden='true'></i>&nbsp;&nbsp; LHN ".$finalOpenLHNCount."</a>
-				</td>
-			</tr>
-			<tr class='lhnDropdownMenu' controlledby='requestsDropdown'>
-				<td class='link'>
-					<a href='/dashboard/requests/meganav'><i class='fa fa-link' aria-hidden='true'></i>&nbsp;&nbsp; MegaNav ".$finalOpenMegaNavCount."</a>
 				</td>
 			</tr>
 
@@ -283,16 +257,6 @@ else if ($myRole === "Editor") {
 					<a href='/dashboard/requests/my-requests'><i class='fa fa-ticket' aria-hidden='true'></i>&nbsp;&nbsp; My Tickets</a>
 				</td>
 			</tr>
-			<tr class='lhnDropdownMenu' controlledby='requestsDropdown'>
-				<td class='link'>
-					<a href='/dashboard/requests/lhn'><i class='fa fa-link' aria-hidden='true'></i>&nbsp;&nbsp; LHN ".$finalOpenLHNCount."</a>
-				</td>
-			</tr>
-			<tr class='lhnDropdownMenu' controlledby='requestsDropdown'>
-				<td class='link'>
-					<a href='/dashboard/requests/meganav'><i class='fa fa-link' aria-hidden='true'></i>&nbsp;&nbsp; MegaNav ".$finalOpenMegaNavCount."</a>
-				</td>
-			</tr>
 			
 			<tr>
 				<td class='link'>
@@ -372,16 +336,6 @@ else {
 					<a href='/dashboard/requests/my-requests'><i class='fa fa-ticket' aria-hidden='true'></i>&nbsp;&nbsp; My Tickets</a>
 				</td>
 			</tr>
-			<tr class='lhnDropdownMenu' controlledby='requestsDropdown'>
-				<td class='link'>
-					<a href='/dashboard/requests/lhn'><i class='fa fa-link' aria-hidden='true'></i>&nbsp;&nbsp; LHN</a>
-				</td>
-			</tr>
-			<tr class='lhnDropdownMenu' controlledby='requestsDropdown'>
-				<td class='link'>
-					<a href='/dashboard/requests/meganav'><i class='fa fa-link' aria-hidden='true'></i>&nbsp;&nbsp; MegaNav</a>
-				</td>
-			</tr>
 			
 			<tr>
 				<td class='link'>
@@ -396,7 +350,7 @@ else {
 
 echo '
 <div class="col-sm-2 nav navFix">
-	'.$approvalRequestSlideOut.'
+	
         <div class="userInfo">
          '.$userInfo.'
         </div>

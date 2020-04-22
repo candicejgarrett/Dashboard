@@ -21,22 +21,7 @@ if ($myRole === 'Admin') {
 	</li>";
 }
 else {
-	//if manager
-	if ($myLevel === '1') {
-		$settingsTopBar = "
-	<li>
-		<a href='/dashboard/users/me.php'>My Profile</a>
-	</li>
-	<li>
-		<a href='/dashboard/users/'>User Directory</a>
-	</li>
-	<li>
-		<a href='/dashboard/logout.php'>Sign Out</a>
-	</li>
-	";
-	}
-	//else not manageer
-	else {
+	
 		$settingsTopBar = "
 	<li>
 		<a href='/dashboard/users/me.php'>My Profile</a>
@@ -47,7 +32,7 @@ else {
 	<li>
 		<a href='/dashboard/logout.php'>Sign Out</a>
 	</li>";
-	}
+	
 	
 }
 
