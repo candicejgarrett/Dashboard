@@ -1,51 +1,56 @@
-<?php 
-include_once('../header.php');
+<?php
+include_once( '../header.php' );
 //CHECKING ROLE
-if ($myRole === 'Admin' || ($myRole === 'Editor') && $groupID == "1") {
-	$canAdd = '<button class="pull-right createNew noExpand" style="margin-top:-25px;" id="addNewEvent" data-toggle="modal" data-target="#addEvent"><i class="fa fa-plus" aria-hidden="true"></i></button>';
-	$canDrag = "";
-}
-else {
-	$canAdd = "";
-	$canDrag = 'eventStartEditable: false,';
+if ( $myRole === 'Admin' || ( $myRole === 'Editor' ) && $groupID == "1" ) {
+  $canAdd = '<button class="pull-right createNew noExpand" style="margin-top:-25px;" id="addNewEvent" data-toggle="modal" data-target="#addEvent"><i class="fa fa-plus" aria-hidden="true"></i></button>';
+  $canDrag = "";
+} else {
+  $canAdd = "";
+  $canDrag = 'eventStartEditable: false,';
 }
 
 ?>
-   <html class="x-content-calendar">
-    <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+<html class="x-content-calendar">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
 <?php echo $stylesjs ?>
-
 <link href='/dashboard/css/fullcalendar.css' rel='stylesheet' />
 <link href='/dashboard/css/fullcalendar.print.css' rel='stylesheet' media='print' />
-<script src='/dashboard/js/moment.min.js'></script>
-<script src='/dashboard/js/fullcalendar.min.js'></script>
-<script src='/dashboard/js/pages/content-calendar.js'></script>
+<script src='/dashboard/js/moment.min.js'></script> 
+<script src='/dashboard/js/fullcalendar.min.js'></script> 
+<script src='/dashboard/js/pages/content-calendar.js'></script> 
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
+<!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 <style>
-	#addPreviewImage,#addPreviewImageMobile,#addPreviewImageMobile {display:none;}
-	#mobile {display:none}
-	.mySecondaryTabs .active {background:#4801FF;color:#ffffff}
-	.mySecondaryTabs {    margin: 0px;
+#addPreviewImage, #addPreviewImageMobile, #addPreviewImageMobile {
+    display: none;
+}
+#mobile {
+    display: none
+}
+.mySecondaryTabs .active {
+    background: #4801FF;
+    color: #ffffff
+}
+.mySecondaryTabs {
+    margin: 0px;
     padding: 0px 0px 10px;
-    border-bottom: 1px solid #f1f1f1;}
-	.mySecondaryTabs li {
+    border-bottom: 1px solid #f1f1f1;
+}
+.mySecondaryTabs li {
     display: inline-block;
     padding: 5px 10px;
     border-radius: 50px;
-	cursor:pointer;
+    cursor: pointer;
 }
-	
-	
-	</style>
+</style>
 <script>
 
 	$( window ).on( "load", function() {
@@ -628,364 +633,330 @@ $(document).ready(function() {
 	});
 });
 </script>
+</head>
 
-    </head>
-
-    <body>
-    
+<body>
 <nav class="navbar navbar-default print_remove" style="background:#ffffff; border:none;">
   <div class="container-fluid">
-   <?php include("../templates/topNav.php") ?>
-  </div><!-- /.container-fluid -->
+    <?php include("../templates/topNav.php") ?>
+  </div>
+  <!-- /.container-fluid --> 
 </nav>
 <div class="container-fluid">
-	<div class="row">
-        <?php include("../templates/lhn.php") ?>
-       
-       <div class="col-sm-10" style="height: 100%;">
+  <div class="row">
+    <?php include("../templates/lhn.php") ?>
+    <div class="col-sm-10" style="height: 100%;">
       <div class="row">
-     	<div class="col-sm-12">
-			<?php include("../templates/alerts.php") ?>
-		</div>
-		</div>
-     	<div class="row contentCalendar">
-			 <div class="col-sm-12">
-				<div class="whitebg" style="min-height: auto !important;">
-						<div class="row">
-			 				<div class="col-sm-12">
-
-							<div class="header print_remove">
-							<!--<a href="export.php" class="addbtn pull-right" style="margin-top:-17px;" id="export">Export CSV &nbsp;<i class="fa fa-download" aria-hidden="true"></i></a>-->
-							<?php echo $canAdd?>
-
-							<h3>Content Calendar</h3>
-
-							</div>
-							<div class="row print_remove">
-							<div class="col-sm-6 pull-left">
-								 <label class="formLabels">Categories:</label>
-								<hr style="margin-top:0px">
-						<div id="hideCategories">
-							<?php 
-								$query = "SELECT DISTINCT * FROM `Calendar Categories` ORDER BY `Category` ASC";
-								$query_result = mysqli_query($connection, $query) or die ("Query to get data from Team task failed: ".mysql_error());
-								while ($row = mysqli_fetch_array($query_result)) {
-									$categoryID = $row["CalendarCategoryID"];
-									$categoryTitle = $row["Category"];
-									$categoryColor = $row["Category Color"];
-									//echo '<div class="eventLabels" id="'.$categoryID.'" style="font-weight:bold;background:'.$categoryColor.' !important">'.$categoryTitle.'</div>';
-									
-									echo '<div class="eventFilter"><div class="eventCheckbox activate" id="'.$categoryID.'" style="background:'.$categoryColor.';border:2px solid '.$categoryColor.'"><i class="fa fa-check" aria-hidden="true"></i></div><div class="eventCheckboxLabel">'.$categoryTitle.'</div></div>';
-
-								}
-								
-			
-							?>
-						</div>
-							</div>
-							<div class="col-sm-6 pull-right">
-								<label class="formLabels">Jump To Date:</label>
-								<table width="100%" border="0" cellspacing="0" cellpadding="010">
-									  <tbody>
-										<tr>
-										  <td width="90%"><input type="date" style="width:100%;display:inline-block;"></td>
-										  <td width="10%" valign="top"><button id="datePicker" class="createNew noExpand"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></td>
-										</tr>
-									  </tbody>
-									</table>
-								
-								<label class="formLabels">Search:</label>
-									
-									<table width="100%" border="0" cellspacing="0" cellpadding="010">
-									  <tbody>
-										<tr>
-										  <td width="100%">
-											  <input type="text" autocomplete="off" name="searchEventsTitle" id="searchEventsTitle" placeholder="By event title... Ex: &#34;FILA Event&#34;" style="width:100%;display:inline-block;"></input>
-										  		<div style="position: relative; width: 100%;">
-										  		<div id="ccSearchResultsContainer">
-													<div class="ccSearchResultsHeader">
-														<div class="filterContainer">
-															
-															<div class="row">
-																<div class="col-sm-12">
-																	<div id="closeSearchResults" class="pull-right"><i class="fa fa-times" aria-hidden="true"></i></div>
-																	<div id="specifyDate">Specify Date</div>
-																	<div id="specifyDateCancel">Clear Dates</div>
-																</div>
-																<div id="specifyDateContainer">
-																	<div class="col-sm-6">
-																		<p>Start Date:</p>
-																		<input type="datetime-local" id="filterStartDate"></input>
-																	</div>
-																	<div class="col-sm-6">
-																		<p>End Date:</p>
-																		<input type="datetime-local" id="filterEndDate"></input>
-																	</div>
-																</div>
-															</div>
-														<hr>
-														<div class="row">
-																<div class="col-sm-12">
-																	<p>Exclude categories:</p>
-														<?php 
-															$query = "SELECT DISTINCT * FROM `Calendar Categories` ORDER BY `Category` ASC";
-															$query_result = mysqli_query($connection, $query) or die ("Query to get data from Team task failed: ".mysql_error());
-															while ($row = mysqli_fetch_array($query_result)) {
-																$categoryID = $row["CalendarCategoryID"];
-																$categoryTitle = $row["Category"];
-																$categoryColor = $row["Category Color"];
-																echo '<div class="eventLabels" categoryid="'.$categoryID.'" style="font-weight:bold;background:'.$categoryColor.' !important">'.$categoryTitle.'</div>';
-
-															}
-
-
-														?>
-																</div>
-															</div>
-													
-															
-														
-														</div>
-														
-													
-										  			<h3>Search Results (<span id="resultCount">0</span>)</h3>
-													</div>
-										  			<div id="ccSearchResults" class="row"></div>
-													
-										  		</div>
-												</div>
-										</td>
-										  
-										</tr>
-									  </tbody>
-									</table>
-									
-								
-								
-								
-
-
-
-							</div>
-							</div>
-							
-				 
-				 			<div class="col-sm-12 text-center">
-				 
-					
-					 <hr>
-								<center><div class="working"><p>Loading...</p><br><img src="/dashboard/images/Gear.gif" style="width:100px !important;"></div></center>
-				 <div id='calendar'></div><br>
-					<center>
-				<!--<a href="share/" target="_blank" style="font-size:20px;" class="print_remove">Sharable Link</a></center>-->
-				 
-			 </div>
-						</div>
-			 		</div>	
-			</div>
-			 </div>	
-    	
-			 
-			
-      		
-       </div>
-     
-       
+        <div class="col-sm-12">
+          <?php include("../templates/alerts.php") ?>
+        </div>
       </div>
-	</div>
-</div>    
+      <div class="row contentCalendar">
+        <div class="col-sm-12">
+          <div class="whitebg" style="min-height: auto !important;">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="header print_remove"> 
+                  <!--<a href="export.php" class="addbtn pull-right" style="margin-top:-17px;" id="export">Export CSV &nbsp;<i class="fa fa-download" aria-hidden="true"></i></a>--> 
+                  <?php echo $canAdd?>
+                  <h3>Content Calendar</h3>
+                </div>
+                <div class="row print_remove">
+                  <div class="col-sm-6 pull-left">
+                    <label class="formLabels">Categories:</label>
+                    <hr style="margin-top:0px">
+                    <div id="hideCategories">
+                      <?php
+                      $query = "SELECT DISTINCT * FROM `Calendar Categories` ORDER BY `Category` ASC";
+                      $query_result = mysqli_query( $connection, $query )or die( "Query to get data from Team task failed: " . mysql_error() );
+                      while ( $row = mysqli_fetch_array( $query_result ) ) {
+                        $categoryID = $row[ "CalendarCategoryID" ];
+                        $categoryTitle = $row[ "Category" ];
+                        $categoryColor = $row[ "Category Color" ];
+                        //echo '<div class="eventLabels" id="'.$categoryID.'" style="font-weight:bold;background:'.$categoryColor.' !important">'.$categoryTitle.'</div>';
 
- <!-- Add Event Modal -->
-<div class="modal fade" id="addEvent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
-        <h4 class="modal-title" id="myModalLabel">Add New Event</h4>
-      </div>
-      <div class="modal-body">
-		  <form id="newEvent">
-        		<div class="form-sm">
-        		<div class="row">
-						<div class="col-sm-12">
-      						<div class="formLabels">Title:*<span class="ast">*</span></div> <input type="text" id="addEventTitle" class="validate">
-      					</div>
-      			</div>
-      			<div class="row">
-						<div class="col-sm-6">
-      						<div class="formLabels">Start Date:*<span class="ast">*</span></div><input type="datetime-local" id="addEventStartDate" class="validate">
-      					</div>
-      					<div class="col-sm-6">
-      						<div class="formLabels">End Date:*<span class="ast">*</span></div> <input type="datetime-local" id="addEventEndDate" class="validate">
-      					</div>
-      			</div>
-      			<div class="row">
-						<div class="col-sm-6">
-      						<div class="formLabels">Category:*<span class="ast">*</span></div>
-							<select name="createEventCategory" id="addEventCategory" style="width:100%">
-								<?php 
-									$query = "SELECT DISTINCT * FROM `Calendar Categories` ORDER BY `Category` ASC";
-									$query_result = mysqli_query($connection, $query) or die ("Query to get data from Team task failed: ".mysql_error());
-									while ($row = mysqli_fetch_array($query_result)) {
-										echo "<option value='".$row["CalendarCategoryID"]."'>".$row["Category"]." Event</option>";
-									}
-								?>
-							</select>
-      					</div>
-      					<div class="col-sm-6">
-      						<div class="formLabels">All Day Event:</div><input type="checkbox" id="addEventAllDay" class="">
-      					</div>
-      			</div>
-      			<div class="row">
-						<div class="col-sm-12">
-      						<div class="formLabels">Description:</strong><pre><textarea id="addEventDescription"></textarea></pre>
-      					</div>
-      			</div>		
-      			</div>
-			  <div class="row">
-						<div class="col-sm-12">
-							<div class="formLabels">Mockups:</div>
-							<hr style="margin: 0px 0px 9px;">
-			  <ul class="myTabs" role="tablist">
-					<li role="presentation" class="active"><a href="#desktopMock" role="tab" data-toggle="tab" class="active one">Desktop</a>
-					  </li>
-				  <li role="presentation"><a href="#mobileMock" role="tab" data-toggle="tab" class="two">Mobile</a>
-				  </li>
-			</ul>
-					<div class="tab-content">		
-				  <div id="desktopMock" role="tabpanel" class="tab-pane fade in active">
-					  <br>
-						<input type="file" id="newEventAddPreviewDesktopImage" name="file">
-					</div>
-							
-					<div id="mobileMock" role="tabpanel" class="tab-pane fade">
-								 <br>
-						<input type="file" id="newEventAddPreviewMobileImage" name="file">
-						
-					</div>
-				  
-				  </div>
-				  
-				  
-				  </div>		
-      			</div>
-     			</div>
-      </div>
-      <div class="modal-footer">
-       
-        <button type="submit" class="genericbtn green_bg" data-dismiss="modal" id="addEvent-btn">Add</button>
-		  <button type="button" class="genericbtn" data-dismiss="modal">Close</button>
-         
-      </div>
-	  </form>
-    </div>
-  </div>
-</div>        
-          
-<!-- VIEW EVENT-->                           
- <div class="modal fade" id="viewEvent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-		
-	<div class="showContent">
-      <div class="modalHeader">
-		  <div id="printCopyLink" class="pull-right"><input type="text" id="copyLinkInput"></div>
-      	<table width="60%" border="0" cellspacing="0" cellpadding="5">
-			  <tbody>
-				<tr>
-				  <td valign="middle" width="80px"><img src="" id="printEventPP" style="border-radius:50%;width:60px;"></td>
-				  <td valign="middle"><p>Event Created By:<br><strong id="printEventCreatedBy"></strong></p></td>
-				</tr>
-			  </tbody>
-		</table>
-		  
-      </div>
-		
-      <div class="modal-body">
-		 
-		  <div class="row">
-		  		<div class="col-sm-6">
-		  				<div class="form-sm" id="previewEventInfo">
-      							<div class="row">
-									<div class="col-sm-12">
-									<div class="formLabels" style="margin-top:0px;">Title: </div><span id="printEventTitle"></span></div>
-									<div class="col-sm-6">
-									<div class="formLabels">Start Date:</div> <span id="printEventStartDate"></span>
-									</div>
-									<div class="col-sm-6">
-										<div class="formLabels">End Date:</div>
-										<span id="printEventEndDate"></span>
-									</div>
-									<div class="col-sm-6">
-									<div class="formLabels">Category:</div> <span id="printEventCategory"></span> Event</div>
-									<div class="col-sm-6">
-									<div class="formLabels">All Day?</div><input type="checkbox" id="printEventAllDay"></div>
-									<div class="col-sm-12">
-									<div class="formLabels">Description:</div><pre><span id="printEventDescription" style="word-break: break-all;"></span></pre></div>
-									</div>
-							  		
-							  		
-								</div>
-     						
-						<div class="form-sm" id="editEventInfo">
-									<div class="row">
-										<div class="col-sm-12">
-								<div class="formLabels">Title:*</div> <input type="text" id="editEventTitle" class="validate">
-									</div>	
-										<div class="col-sm-12"><div class="formLabels">Start Date:*</div><input type="datetime-local" id="editEventStartDate"></div>	
-										<div class="col-sm-12"><div class="formLabels">End Date:*</div> <input type="datetime-local" id="editEventEndDate"></div>	
-										
-										
-										<div class="col-sm-6"><div class="formLabels">Category:*</div>
-											<select type="text" id="editEventCategory" style="width:100%;">
-									<?php 
-										$query = "SELECT DISTINCT * FROM `Calendar Categories` ORDER BY `Category` ASC";
-										$query_result = mysqli_query($connection, $query) or die ("Query to get data from Team task failed: ".mysql_error());
-										while ($row = mysqli_fetch_array($query_result)) {
-											echo "<option value='".$row["CalendarCategoryID"]."'>".$row["Category"]." Event</option>";
-										}
-									?>
-								</select>
-								</div>	
-										<div class="col-sm-6"><div class="formLabels">All Day?</div><input type="checkbox" id="editEventAllDay"></div>	
-										<div class="col-sm-12">
-								<div class="formLabels">Description:</div><pre><textarea id="editEventDescription"></textarea></pre>
-									</div>	
-										
-										
-								
-							</div>
-						  
-						</div>
-				
-						<div class="col-sm-12" style="padding:0px">
-										<div id="printCTAs" class="pull-right"></div>
-										</div>
-		  		</div>
-			  
-			  	<div class="col-sm-6" id="printPreview">
-		  		
-		  		</div>
-		  </div>
-		  
-		  
-        		
-      </div>
-      <div class="modal-footer">
-       <button type="button" class="genericbtn" data-dismiss="modal">Close</button>
-        
-      </div>
-	</div>
+                        echo '<div class="eventFilter"><div class="eventCheckbox activate" id="' . $categoryID . '" style="background:' . $categoryColor . ';border:2px solid ' . $categoryColor . '"><i class="fa fa-check" aria-hidden="true"></i></div><div class="eventCheckboxLabel">' . $categoryTitle . '</div></div>';
+
+                      }
+
+
+                      ?>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 pull-right">
+                    <label class="formLabels">Jump To Date:</label>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="010">
+                      <tbody>
+                        <tr>
+                          <td width="90%"><input type="date" style="width:100%;display:inline-block;"></td>
+                          <td width="10%" valign="top"><button id="datePicker" class="createNew noExpand"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <label class="formLabels">Search:</label>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="010">
+                      <tbody>
+                        <tr>
+                          <td width="100%"><input type="text" autocomplete="off" name="searchEventsTitle" id="searchEventsTitle" placeholder="By event title... Ex: &#34;FILA Event&#34;" style="width:100%;display:inline-block;">
+                            </input>
+                            <div style="position: relative; width: 100%;">
+                              <div id="ccSearchResultsContainer">
+                                <div class="ccSearchResultsHeader">
+                                  <div class="filterContainer">
+                                    <div class="row">
+                                      <div class="col-sm-12">
+                                        <div id="closeSearchResults" class="pull-right"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                        <div id="specifyDate">Specify Date</div>
+                                        <div id="specifyDateCancel">Clear Dates</div>
+                                      </div>
+                                      <div id="specifyDateContainer">
+                                        <div class="col-sm-6">
+                                          <p>Start Date:</p>
+                                          <input type="datetime-local" id="filterStartDate">
+                                          </input>
+                                        </div>
+                                        <div class="col-sm-6">
+                                          <p>End Date:</p>
+                                          <input type="datetime-local" id="filterEndDate">
+                                          </input>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-sm-12">
+                                        <p>Exclude categories:</p>
+                                        <?php
+                                        $query = "SELECT DISTINCT * FROM `Calendar Categories` ORDER BY `Category` ASC";
+                                        $query_result = mysqli_query( $connection, $query )or die( "Query to get data from Team task failed: " . mysql_error() );
+                                        while ( $row = mysqli_fetch_array( $query_result ) ) {
+                                          $categoryID = $row[ "CalendarCategoryID" ];
+                                          $categoryTitle = $row[ "Category" ];
+                                          $categoryColor = $row[ "Category Color" ];
+                                          echo '<div class="eventLabels" categoryid="' . $categoryID . '" style="font-weight:bold;background:' . $categoryColor . ' !important">' . $categoryTitle . '</div>';
+
+                                        }
+
+
+                                        ?>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <h3>Search Results (<span id="resultCount">0</span>)</h3>
+                                </div>
+                                <div id="ccSearchResults" class="row"></div>
+                              </div>
+                            </div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-sm-12 text-center">
+                  <hr>
+                  <center>
+                    <div class="working">
+                      <p>Loading...</p>
+                      <br>
+                      <img src="/dashboard/images/Gear.gif" style="width:100px !important;"></div>
+                  </center>
+                  <div id='calendar'></div>
+                  <br>
+                  <center>
+                  <!--<a href="share/" target="_blank" style="font-size:20px;" class="print_remove">Sharable Link</a></center>--> 
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-        
 
-    <?php echo $scripts?>
+<!-- Add Event Modal -->
+<div class="modal fade" id="addEvent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header"> <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+        <h4 class="modal-title" id="myModalLabel">Add New Event</h4>
+      </div>
+      <div class="modal-body">
+      <form id="newEvent">
+        <div class="form-sm">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="formLabels">Title:*<span class="ast">*</span></div>
+              <input type="text" id="addEventTitle" class="validate">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="formLabels">Start Date:*<span class="ast">*</span></div>
+              <input type="datetime-local" id="addEventStartDate" class="validate">
+            </div>
+            <div class="col-sm-6">
+              <div class="formLabels">End Date:*<span class="ast">*</span></div>
+              <input type="datetime-local" id="addEventEndDate" class="validate">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="formLabels">Category:*<span class="ast">*</span></div>
+              <select name="createEventCategory" id="addEventCategory" style="width:100%">
+                <?php
+                $query = "SELECT DISTINCT * FROM `Calendar Categories` ORDER BY `Category` ASC";
+                $query_result = mysqli_query( $connection, $query )or die( "Query to get data from Team task failed: " . mysql_error() );
+                while ( $row = mysqli_fetch_array( $query_result ) ) {
+                  echo "<option value='" . $row[ "CalendarCategoryID" ] . "'>" . $row[ "Category" ] . " Event</option>";
+                }
+                ?>
+              </select>
+            </div>
+            <div class="col-sm-6">
+              <div class="formLabels">All Day Event:</div>
+              <input type="checkbox" id="addEventAllDay" class="">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="formLabels">Description:</strong>
+                <pre><textarea id="addEventDescription"></textarea>
+</pre>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="formLabels">Mockups:</div>
+              <hr style="margin: 0px 0px 9px;">
+              <ul class="myTabs" role="tablist">
+                <li role="presentation" class="active"><a href="#desktopMock" role="tab" data-toggle="tab" class="active one">Desktop</a> </li>
+                <li role="presentation"><a href="#mobileMock" role="tab" data-toggle="tab" class="two">Mobile</a> </li>
+              </ul>
+              <div class="tab-content">
+                <div id="desktopMock" role="tabpanel" class="tab-pane fade in active"> <br>
+                  <input type="file" id="newEventAddPreviewDesktopImage" name="file">
+                </div>
+                <div id="mobileMock" role="tabpanel" class="tab-pane fade"> <br>
+                  <input type="file" id="newEventAddPreviewMobileImage" name="file">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="genericbtn green_bg" data-dismiss="modal" id="addEvent-btn">Add</button>
+          <button type="button" class="genericbtn" data-dismiss="modal">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
-     <input type="hidden" id="holdingNotificationCount"> 
-     <input type="hidden" id="printEventID"> 
-      <input type="hidden" id="eventID"> 
-    </body>
+<!-- VIEW EVENT-->
+<div class="modal fade" id="viewEvent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="showContent">
+        <div class="modalHeader">
+          <div id="printCopyLink" class="pull-right">
+            <input type="text" id="copyLinkInput">
+          </div>
+          <table width="60%" border="0" cellspacing="0" cellpadding="5">
+            <tbody>
+              <tr>
+                <td valign="middle" width="80px"><img src="" id="printEventPP" style="border-radius:50%;width:60px;"></td>
+                <td valign="middle"><p>Event Created By:<br>
+                    <strong id="printEventCreatedBy"></strong></p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-sm" id="previewEventInfo">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="formLabels" style="margin-top:0px;">Title: </div>
+                    <span id="printEventTitle"></span></div>
+                  <div class="col-sm-6">
+                    <div class="formLabels">Start Date:</div>
+                    <span id="printEventStartDate"></span> </div>
+                  <div class="col-sm-6">
+                    <div class="formLabels">End Date:</div>
+                    <span id="printEventEndDate"></span> </div>
+                  <div class="col-sm-6">
+                    <div class="formLabels">Category:</div>
+                    <span id="printEventCategory"></span> Event</div>
+                  <div class="col-sm-6">
+                    <div class="formLabels">All Day?</div>
+                    <input type="checkbox" id="printEventAllDay">
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="formLabels">Description:</div>
+                    <pre><span id="printEventDescription" style="word-break: break-all;"></span></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="form-sm" id="editEventInfo">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="formLabels">Title:*</div>
+                    <input type="text" id="editEventTitle" class="validate">
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="formLabels">Start Date:*</div>
+                    <input type="datetime-local" id="editEventStartDate">
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="formLabels">End Date:*</div>
+                    <input type="datetime-local" id="editEventEndDate">
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="formLabels">Category:*</div>
+                    <select type="text" id="editEventCategory" style="width:100%;">
+                      <?php
+                      $query = "SELECT DISTINCT * FROM `Calendar Categories` ORDER BY `Category` ASC";
+                      $query_result = mysqli_query( $connection, $query )or die( "Query to get data from Team task failed: " . mysql_error() );
+                      while ( $row = mysqli_fetch_array( $query_result ) ) {
+                        echo "<option value='" . $row[ "CalendarCategoryID" ] . "'>" . $row[ "Category" ] . " Event</option>";
+                      }
+                      ?>
+                    </select>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="formLabels">All Day?</div>
+                    <input type="checkbox" id="editEventAllDay">
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="formLabels">Description:</div>
+                    <pre><textarea id="editEventDescription"></textarea>
+</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12" style="padding:0px">
+                <div id="printCTAs" class="pull-right"></div>
+              </div>
+            </div>
+            <div class="col-sm-6" id="printPreview"> </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="genericbtn" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<?php echo $scripts?>
+<input type="hidden" id="holdingNotificationCount">
+<input type="hidden" id="printEventID">
+<input type="hidden" id="eventID">
+</body>
 </html>

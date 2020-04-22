@@ -1,31 +1,29 @@
-<?php 
-include_once('../../header.php');
- require('../../connect.php');
+<?php
+include_once( '../../header.php' );
+require( '../../connect.php' );
 ?>
-   <html class="x-template-todo">
-    <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <?php echo $stylesjs ?>
-
+<html class="x-template-todo">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<?php echo $stylesjs ?>
 <link href='/dashboard/css/fullcalendar.css' rel='stylesheet' />
 <link href='/dashboard/css/fullcalendar.print.css' rel='stylesheet' media='print' />
-<script src='/dashboard/js/moment.min.js'></script>
+<script src='/dashboard/js/moment.min.js'></script> 
 <script src='/dashboard/js/fullcalendar.min.js'></script>
 <style>
-	.modal-body {
-		display:none;
-	}
+.modal-body {
+    display: none;
+}
 </style>
-		
-		
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
+<!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<![endif]--> 
 <script>
 
 	$(document).ready(function() {
@@ -461,248 +459,242 @@ var todaysdate = new Date().getTime();
 	});
 
 </script>
+</head>
 
-    </head>
-
-    <body>
-    
+<body>
 <nav class="navbar navbar-default print_remove" style="background:#ffffff; border:none;">
   <div class="container-fluid">
-   <?php include("../../templates/topNav.php") ?>
-  </div><!-- /.container-fluid -->
+    <?php include("../../templates/topNav.php") ?>
+  </div>
+  <!-- /.container-fluid --> 
 </nav>
 <div class="container-fluid">
-	<div class="row">
-        <?php include("../../templates/lhn.php") ?>
-       
-       <div class="col-sm-10" style="height: 100%;">
+  <div class="row">
+    <?php include("../../templates/lhn.php") ?>
+    <div class="col-sm-10" style="height: 100%;">
       <div class="row">
-     	<div class="col-sm-12">
-			<?php include("../../templates/alerts.php") ?>
-		</div>
-		</div>
-     	<div class="row contentCalendar">
-		 <div class="col-sm-12" id="moveOver">
-			<div class="whitebg">
-    	 		
-    	 		
-					<div class="header">
-					<h3>Calendar</h3>
-					</div>
-				
-         		
-         				
-          		<div class="row print_remove">
-									<div class="col-sm-4 text-left">
-									<div class="accordionHeader">
-										<h3>Key</h3>
-										<div class="expandIcon"><i class="fa fa-plus" aria-hidden="true"></i></div>
-										<div class="collapseIcon"><i class="fa fa-minus" aria-hidden="true"></i></div>
-									</div>
-									<div  class="accordionContent">
-										<div class="row">
-									<div class="col-sm-6">
-										<h4>Tasks</h4>
-										<div class="fc-event" style="margin-bottom:5px">Standard</div>
-										<div class="fc-event ready" style="margin-bottom:5px">Cadence - Ready</div>
-										<div class="fc-event notReady" style="margin-bottom:5px">Cadence - Not Ready</div>
-										<div class="fc-event" style="margin-bottom:5px;"><div class="dot inReview"></div> In Review</div>
-										<div class="fc-event" style="margin-bottom:5px;"><div class="dot approved"></div> Approved</div>
-										<div class="fc-event calendar_Overdue" style="margin-bottom:5px">Overdue</div>
-										<div class="fc-event calendar_Complete">Completed</div>
-									</div>
-									<div class="col-sm-6">
-										<h4>Reviews</h4>
-										<div class="fc-event" style="margin-bottom:5px;background-color: #AC32E4;"><div class="dot new"></div> Pending Your Approval</div>
-										<div class="fc-event" style="margin-bottom:5px;background-color: #AC32E4;"><div class="dot approved"></div> Pending Other Members Approval</div>
-										<div class="fc-event calendar_Overdue" style="margin-bottom:5px">Overdue</div>
-										<div class="fc-event calendar_Complete" style="background-color: #AC32E4;">Completed</div>
-									</div>
-											</div>
-									</div>
-									</div>
-									<div class="col-sm-6 text-left pull-right">
-									<label class="formLabels text-left">Jump To Date:</label>
-									<table width="100%" border="0" cellspacing="0" cellpadding="0">
-								  <tbody>
-									<tr>
-									  <td width="90%"><input type="date" style="width:100%"></td>
-									  <td width="10%" valign="top"><button style="margin-left:5px;" id="datePicker" class="createNew noExpand"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></td>
-									</tr>
-								  </tbody>
-								</table>		
-									
-									
-									
-									
-									</div>
-									
-									
-									
-								</div>
-          		<br><br>
-           		<div class="row">
-		
-		 <div class="col-sm-12">
-			
-    	 		<center><div class="working"><p>Loading...</p><br><img src="/dashboard/images/Gear.gif" style="width:100px !important;"></div></center>
-				<div id='calendar'></div>
-
-				<div style='clear:both'></div>	
-           	
-     	 </div>	
-     	
-     	</div>
-
-		</div>
-     	 	
-     	 	 
-		 </div>	
-     	
-     	</div>
-     	
-     
-       </div>
-       
-      
-	</div>
-</div>    
- <!-- View Event Modal -->
+        <div class="col-sm-12">
+          <?php include("../../templates/alerts.php") ?>
+        </div>
+      </div>
+      <div class="row contentCalendar">
+        <div class="col-sm-12" id="moveOver">
+          <div class="whitebg">
+            <div class="header">
+              <h3>Calendar</h3>
+            </div>
+            <div class="row print_remove">
+              <div class="col-sm-4 text-left">
+                <div class="accordionHeader">
+                  <h3>Key</h3>
+                  <div class="expandIcon"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                  <div class="collapseIcon"><i class="fa fa-minus" aria-hidden="true"></i></div>
+                </div>
+                <div  class="accordionContent">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h4>Tasks</h4>
+                      <div class="fc-event" style="margin-bottom:5px">Standard</div>
+                      <div class="fc-event ready" style="margin-bottom:5px">Cadence - Ready</div>
+                      <div class="fc-event notReady" style="margin-bottom:5px">Cadence - Not Ready</div>
+                      <div class="fc-event" style="margin-bottom:5px;">
+                        <div class="dot inReview"></div>
+                        In Review</div>
+                      <div class="fc-event" style="margin-bottom:5px;">
+                        <div class="dot approved"></div>
+                        Approved</div>
+                      <div class="fc-event calendar_Overdue" style="margin-bottom:5px">Overdue</div>
+                      <div class="fc-event calendar_Complete">Completed</div>
+                    </div>
+                    <div class="col-sm-6">
+                      <h4>Reviews</h4>
+                      <div class="fc-event" style="margin-bottom:5px;background-color: #AC32E4;">
+                        <div class="dot new"></div>
+                        Pending Your Approval</div>
+                      <div class="fc-event" style="margin-bottom:5px;background-color: #AC32E4;">
+                        <div class="dot approved"></div>
+                        Pending Other Members Approval</div>
+                      <div class="fc-event calendar_Overdue" style="margin-bottom:5px">Overdue</div>
+                      <div class="fc-event calendar_Complete" style="background-color: #AC32E4;">Completed</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 text-left pull-right">
+                <label class="formLabels text-left">Jump To Date:</label>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td width="90%"><input type="date" style="width:100%"></td>
+                      <td width="10%" valign="top"><button style="margin-left:5px;" id="datePicker" class="createNew noExpand"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+              <div class="col-sm-12">
+                <center>
+                  <div class="working">
+                    <p>Loading...</p>
+                    <br>
+                    <img src="/dashboard/images/Gear.gif" style="width:100px !important;"></div>
+                </center>
+                <div id='calendar'></div>
+                <div style='clear:both'></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- View Event Modal -->
 <div class="modal fade" id="viewTask" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modalHeader">
-      	<table width="100%" border="0" cellspacing="0" cellpadding="5">
-			  <tbody>
-				<tr>
-				  <td valign="middle" width="80px"><img src="" id="printEventCreator" style="border-radius:50%;width:60px;"></td>
-				  <td valign="middle"><p>Task Assigned By:<br><strong id="printEventCreatorName"></strong></p></td>
-				   
-				</tr>
-			  </tbody>
-		</table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="5">
+          <tbody>
+            <tr>
+              <td valign="middle" width="80px"><img src="" id="printEventCreator" style="border-radius:50%;width:60px;"></td>
+              <td valign="middle"><p>Task Assigned By:<br>
+                  <strong id="printEventCreatorName"></strong></p></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-		<center><div class="loading"><p>Loading...</p><br><img src="/dashboard/images/Gear.gif" style="width:100px !important;"></div></center>
+      <center>
+        <div class="loading">
+          <p>Loading...</p>
+          <br>
+          <img src="/dashboard/images/Gear.gif" style="width:100px !important;"></div>
+      </center>
       <div class="modal-body">
-		  
-		  <div class="row">
-			  <div class="col-sm-6">
-				  
-		  			<div class="form-sm">
-      						<div class="row">
-        			<div class="col-sm-6">
-        			<div class="formLabels">Title: </div><span id="printEventTitle"></span><br><br>
-					<div class="formLabels">Project: </div><em><span id="printEventProjectTitle"></span></em><br><br>
-        			<div class="formLabels">Due Date:</div> <span id="printEventStartDate"></span><br><br>
-        			
-					
-					</div>
-					<div class="col-sm-6">
-					<div class="formLabels">Status:</div> <div id="printEventStatus"><strong class='taskStatus'></strong></div><br><br>
-        			
-        			<div class="formLabels">Category:</div> <span id="printEventCategory"></span><br><br>
-					
-					
-					</div>
-					<div class="col-sm-12">
-        			<div class="formLabels">Description:</div><br><pre id="printEventDescription" style="word-break: break-all;"></pre>
-					
-					</div>
-      			</div>
-     						</div>
-		  	</div>
-			   <div class="col-sm-6">
-				   <div class="commentSide">
-		  			<div id="printComments" class="comment-container"></div>
-				   
-				   <div id='newCommentContainer'><hr><table style='width: 100%;'><tr><td><pre style='width: 100%;'><textarea id='newComment' rows='1' placeholder='Message...'></textarea></pre></td><td><button id='addNewComment' class='smallSend' style='margin-top: -10px;' taskid=''><i class='fa fa-paper-plane' aria-hidden='true'></i></button></td></tr></table></div>
-					  </div>
-		  	</div>
-		  
-		  </div>
-		  
-		  
-       		
-        		
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-sm">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="formLabels">Title: </div>
+                  <span id="printEventTitle"></span><br>
+                  <br>
+                  <div class="formLabels">Project: </div>
+                  <em><span id="printEventProjectTitle"></span></em><br>
+                  <br>
+                  <div class="formLabels">Due Date:</div>
+                  <span id="printEventStartDate"></span><br>
+                  <br>
+                </div>
+                <div class="col-sm-6">
+                  <div class="formLabels">Status:</div>
+                  <div id="printEventStatus"><strong class='taskStatus'></strong></div>
+                  <br>
+                  <br>
+                  <div class="formLabels">Category:</div>
+                  <span id="printEventCategory"></span><br>
+                  <br>
+                </div>
+                <div class="col-sm-12">
+                  <div class="formLabels">Description:</div>
+                  <br>
+                  <pre id="printEventDescription" style="word-break: break-all;"></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="commentSide">
+              <div id="printComments" class="comment-container"></div>
+              <div id='newCommentContainer'>
+                <hr>
+                <table style='width: 100%;'>
+                  <tr>
+                    <td><pre style='width: 100%;'><textarea id='newComment' rows='1' placeholder='Message...'></textarea>
+</pre></td>
+                    <td><button id='addNewComment' class='smallSend' style='margin-top: -10px;' taskid=''><i class='fa fa-paper-plane' aria-hidden='true'></i></button></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
-       <hr>
-		 
+        <hr>
         <a href="" class="genericbtn" id="viewTaskModal-btn">View Project</a>
-          <button type="button" class="genericbtn" data-dismiss="modal">Close</button>
+        <button type="button" class="genericbtn" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
-		
- <!-- View Review Modal -->
+
+<!-- View Review Modal -->
 <div class="modal fade" id="viewReview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modalHeader">
-      	<table width="100%" border="0" cellspacing="0" cellpadding="5">
-			  <tbody>
-				<tr>
-				  <td valign="middle" width="80px"><img src="" id="printReviewCreator" style="border-radius:50%;width:60px;"></td>
-				  <td valign="middle"><p>Review Created By:<br><strong id="printReviewCreatorName"></strong></p></td>
-				   
-				</tr>
-			  </tbody>
-		</table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="5">
+          <tbody>
+            <tr>
+              <td valign="middle" width="80px"><img src="" id="printReviewCreator" style="border-radius:50%;width:60px;"></td>
+              <td valign="middle"><p>Review Created By:<br>
+                  <strong id="printReviewCreatorName"></strong></p></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-		<center><div class="loading"><p>Loading...</p><br><img src="/dashboard/images/Gear.gif" style="width:100px !important;"></div></center>
+      <center>
+        <div class="loading">
+          <p>Loading...</p>
+          <br>
+          <img src="/dashboard/images/Gear.gif" style="width:100px !important;"></div>
+      </center>
       <div class="modal-body">
-		  
-		  <div class="row">
-			  <div class="col-sm-12">
-				  
-		  			<div class="form-sm">
-      						<div class="row">
-        			<div class="col-sm-6">
-        			<div class="formLabels">Title: </div><span id="printReviewTitle"></span><br><br>
-					<div class="formLabels">Project: </div><em><span id="printReviewProjectTitle"></span></em><br><br>
-        			<div class="formLabels">Due Date:</div> <span id="printReviewStartDate"></span><br><br>
-        			
-					
-					</div>
-					<div class="col-sm-6">
-					<div class="formLabels">Status:</div> <div id="printReviewStatus"><strong class='taskStatus'></strong></div><br><br>
-        			
-        			<div class="formLabels">Category:</div> <span id="printReviewCategory"></span><br><br>
-					
-					
-					</div>
-					<div class="col-sm-12">
-        			<div class="formLabels">Members:</div>
-						
-						<div id="printReviewMembers"></div>
-					
-					</div>
-      			</div>
-     						</div>
-		  	</div>
-			   
-		  
-		  </div>
-		  
-		  
-       		
-        		
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-sm">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="formLabels">Title: </div>
+                  <span id="printReviewTitle"></span><br>
+                  <br>
+                  <div class="formLabels">Project: </div>
+                  <em><span id="printReviewProjectTitle"></span></em><br>
+                  <br>
+                  <div class="formLabels">Due Date:</div>
+                  <span id="printReviewStartDate"></span><br>
+                  <br>
+                </div>
+                <div class="col-sm-6">
+                  <div class="formLabels">Status:</div>
+                  <div id="printReviewStatus"><strong class='taskStatus'></strong></div>
+                  <br>
+                  <br>
+                  <div class="formLabels">Category:</div>
+                  <span id="printReviewCategory"></span><br>
+                  <br>
+                </div>
+                <div class="col-sm-12">
+                  <div class="formLabels">Members:</div>
+                  <div id="printReviewMembers"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
-       <hr>
-		  
-        <a href="" class="genericbtn" id="viewReviewProjectModal-btn">View Project</a>
-		   <a href="" class="genericbtn" id="viewReviewModal-btn" target="_blank">View Review</a>
-		  <button type="button" class="genericbtn" data-dismiss="modal">Close</button>
-         
+        <hr>
+        <a href="" class="genericbtn" id="viewReviewProjectModal-btn">View Project</a> <a href="" class="genericbtn" id="viewReviewModal-btn" target="_blank">View Review</a>
+        <button type="button" class="genericbtn" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
-  
-
-    <?php echo $scripts ?>
-     
-    </body>
+<?php echo $scripts ?>
+</body>
 </html>

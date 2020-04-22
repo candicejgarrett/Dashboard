@@ -1,21 +1,20 @@
 <?php
- if(!isset($_SESSION)) 
-    { 
-        session_start();
-    } 
-
-$connection = mysqli_connect('127.0.0.1', 'root', 'newpassword');
-date_default_timezone_set('America/New_York');
-
-
-if (!$connection){
-    die("Database Connection Failed" . mysqli_error($connection));
-	echo "failed db connection";
+if ( !isset( $_SESSION ) ) {
+  session_start();
 }
-$select_db = mysqli_select_db($connection, 'dashboard');
-if (!$select_db){
-    die("Database Selection Failed" . mysqli_error($connection));
-	echo "failed db connection";
+
+$connection = mysqli_connect( '127.0.0.1', 'root', 'newpassword' );
+date_default_timezone_set( 'America/New_York' );
+
+
+if ( !$connection ) {
+  die( "Database Connection Failed" . mysqli_error( $connection ) );
+  echo "failed db connection";
+}
+$select_db = mysqli_select_db( $connection, 'dashboard' );
+if ( !$select_db ) {
+  die( "Database Selection Failed" . mysqli_error( $connection ) );
+  echo "failed db connection";
 }
 
 
@@ -24,7 +23,6 @@ $servername = "127.0.0.1";
 $serverusername = "root";
 $serverpassword = "newpassword";
 $dbname = "dashboard";
-
 
 
 //styles and js links

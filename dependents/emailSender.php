@@ -1,26 +1,25 @@
 <?php
 
-require('../connect.php');
-require('../header.php');
+require( '../connect.php' );
+require( '../header.php' );
 
 
+function addProjectMember( $recipientUserID, $projectID ) {
 
-function addProjectMember($recipientUserID,$projectID) {
-	
-	
-	//getting members
-	$getRecipient = "SELECT * FROM `user` WHERE `userID` = '$recipientUserID' AND `userID` != '$userID'";
-	$getRecipient_result = mysqli_query($connection, $getRecipient) or die ("getNotes_result to get data from Team Project failed: ".mysql_error());
-	while($row = mysqli_fetch_array($getRecipient_result)) {
-		$recipientEmail =$row["email"];
-		$recipientFN = $row["First Name"];
-		$recipientPP = $row["PP Link"];
-	}
-	
-	$subject = "You have been added to the project: ".$projectName.".";
-	
-		$to = $recipientEmail;
-		$message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+  //getting members
+  $getRecipient = "SELECT * FROM `user` WHERE `userID` = '$recipientUserID' AND `userID` != '$userID'";
+  $getRecipient_result = mysqli_query( $connection, $getRecipient )or die( "getNotes_result to get data from Team Project failed: " . mysql_error() );
+  while ( $row = mysqli_fetch_array( $getRecipient_result ) ) {
+    $recipientEmail = $row[ "email" ];
+    $recipientFN = $row[ "First Name" ];
+    $recipientPP = $row[ "PP Link" ];
+  }
+
+  $subject = "You have been added to the project: " . $projectName . ".";
+
+  $to = $recipientEmail;
+  $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -339,7 +338,7 @@ function addProjectMember($recipientUserID,$projectID) {
                       <a href="https://candicejgarrett.com/dashboard/users/me.php"><table width="110" border="0" cellspacing="0" cellpadding="1" style="float:right">
 					  <tbody>
 						<tr>
-						  <td align="right" width="30px"><img src="https://candicejgarrett.com'.$recipientPP.'" class="pp"></td>
+						  <td align="right" width="30px"><img src="https://candicejgarrett.com' . $recipientPP . '" class="pp"></td>
 						  <td align="right"><a href="https://candicejgarrett.com/me.php">My Profile</a></td>
 						</tr>
 					  </tbody>
@@ -365,14 +364,14 @@ function addProjectMember($recipientUserID,$projectID) {
         <table cellspacing="0" cellpadding="0" width="600" class="w320">
           <tr>
             <td class="header-lg">
-              Welcome to the project <span style="text-decoration: underline">'.$projectName.'</span>!
+              Welcome to the project <span style="text-decoration: underline">' . $projectName . '</span>!
             </td>
           </tr>
           <tr>
             <td class="free-text">
-              Hi <strong>'.$recipientFN.'</strong>,<br>you have been added to a new project.
+              Hi <strong>' . $recipientFN . '</strong>,<br>you have been added to a new project.
               <br><br>
-              <a href="https://candicejgarrett.com/dashboard/team-projects/view/?projectID='.$projectID.'" class="button">View Project</a>
+              <a href="https://candicejgarrett.com/dashboard/team-projects/view/?projectID=' . $projectID . '" class="button">View Project</a>
               <br><br>
             </td>
           </tr>
@@ -405,21 +404,10 @@ function addProjectMember($recipientUserID,$projectID) {
 
 </body>
 </html>';
-		mail($to, $subject, $message, $headers);
+  mail( $to, $subject, $message, $headers );
 
-	
-	
 
 }
-
-
-
-			
-		 		
-				
-	
-
-	
 
 
 ?>

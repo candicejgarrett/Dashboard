@@ -1,60 +1,56 @@
-<?php 
-include_once('../../header.php');
-require('../../connect.php');
+<?php
+include_once( '../../header.php' );
+require( '../../connect.php' );
 
 
-								
 ?>
-  
-  
-   <html class="x-team-projects">
-    <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <?php echo $stylesjs ?>
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+<html class="x-team-projects">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<?php echo $stylesjs ?> 
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
+<!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<![endif]--> 
 <script type="text/javascript" src="/dashboard/js/pages/teamprojects.js"></script>
 <style>
-	select:after {
-		 content: '<>';
-  font: 17px "Consolas", monospace;
-  color: #333;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  right: 11px;
-  /*Adjust for position however you want*/
+select:after {
+    content: '<>';
+    font: 17px "Consolas", monospace;
+    color: #333;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 11px;
+    /*Adjust for position however you want*/
   
-  top: 18px;
-  padding: 0 0 2px;
-  border-bottom: 1px solid #999;
-  /*left line */
+    top: 18px;
+    padding: 0 0 2px;
+    border-bottom: 1px solid #999;
+    /*left line */
   
-  position: absolute;
-  pointer-events: none;
-	}
-	
-	input[type="checkbox"] {
-		display:inline-block;
-		width:20px;
-	}
-	input[type="checkbox"] + label { 
-  	margin-right:20px;
-	}
-	.memberEmails {
-		    font-weight: bold;
+    position: absolute;
+    pointer-events: none;
+}
+input[type="checkbox"] {
+    display: inline-block;
+    width: 20px;
+}
+input[type="checkbox"] + label {
+    margin-right: 20px;
+}
+.memberEmails {
+    font-weight: bold;
     line-height: 25px;
     font-style: italic;
-	}
+}
 </style>
- <script>
+<script>
 $(document).ready(function(){
 	$( "#createNewProject-btn" ).click(function() {
 	$("#createNewProject").slideToggle();
@@ -391,227 +387,195 @@ $(document).ready(function(){
 });
 
 		</script>
-    </head>
-    <body>
-
+</head>
+<body>
 <nav class="navbar navbar-default" style="background:#ffffff; border:none;">
   <div class="container-fluid">
-   <?php 
-	include("../../templates/topNav.php") ?>
-  </div><!-- /.container-fluid -->
+    <?php
+    include( "../../templates/topNav.php" )
+    ?>
+  </div>
+  <!-- /.container-fluid --> 
 </nav>
 <div class="container-fluid">
-	<div class="row">
-       <?php include("../../templates/lhn.php") ?>
-       
-       <div class="col-sm-10" style="height: 100%;">
-      		<div class="row">
-      		<div class="col-sm-12">
-      			<div class="whitebg">
-					<div class="row">
-					<div class="col-sm-12">
-					<div class="header">
-					<button id="createNewProject-btn" class="pull-right createNew noExpand" style="margin-top:-25px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
-					
-						<h3><?php echo $groupName?> Templates</h3>
-					</div>
-					
-				</div>
-      			</div>
-      			<!--<hr>-->
-      			<div class="row" id="createNewProject">
-					<div class="col-sm-12">
-						<div class="row">
-						<div class="col-sm-12">
-							<h3>Create A New Template </h3>
-							<div id="#validate" class="validate"></div><br>
-						</div>
-       					</div>
-					<div class="row">	
-					<div class="col-sm-6">
-						<div class="row">	
-						<div class="col-sm-12">
-						<div class="formLabels">Template Name:</div>
-						<input type="text" id="templateName" name="templateName">
-						</div>
-					<div class="col-sm-12">
+<div class="row">
+<?php include("../../templates/lhn.php") ?>
+<div class="col-sm-10" style="height: 100%;">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="whitebg">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="header">
+              <button id="createNewProject-btn" class="pull-right createNew noExpand" style="margin-top:-25px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+              <h3><?php echo $groupName?> Templates</h3>
+            </div>
+          </div>
+        </div>
+        <!--<hr>-->
+        <div class="row" id="createNewProject">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-12">
+                <h3>Create A New Template </h3>
+                <div id="#validate" class="validate"></div>
+                <br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="formLabels">Template Name:</div>
+                    <input type="text" id="templateName" name="templateName">
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="formLabels">Visibility:</div>
+                    <select type="text" id="templateVisible">
+                      <option value="Public">Public</option>
+                      <option value="Private">Private</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="formLabels">Category:</div>
+                    <?php
 
-							<div class="formLabels">Visibility:</div>
-							<select type="text" id="templateVisible">
-							<option value="Public">Public</option>
-							<option value="Private">Private</option>
-							</select>
+                    $getCategories = "SELECT DISTINCT * FROM `Team Projects Categories` WHERE `GroupID` = '$groupID'";
+                    $getCategories_result = mysqli_query( $connection, $getCategories )or die( "Query to get data from Team task failed: " . mysql_error() );
 
-						</div>
-					<div class="col-sm-12">
-						<div class="formLabels">Category:</div>
-						<?php
+                    echo '<select id="templateCategory">'; // Open your drop down box
 
-									$getCategories = "SELECT DISTINCT * FROM `Team Projects Categories` WHERE `GroupID` = '$groupID'";
-									$getCategories_result = mysqli_query($connection, $getCategories) or die ("Query to get data from Team task failed: ".mysql_error());
+                    // Loop through the query results, outputing the options one by one
+                    while ( $row = mysqli_fetch_array( $getCategories_result ) ) {
+                      $categoryName = $row[ 'Category' ];
+                      $categoryID = $row[ 'ProjectCategoryID' ];
+                      echo "<option value='$categoryID'>$categoryName</option>";
+                    }
 
-									echo '<select id="templateCategory">'; // Open your drop down box
+                    echo '</select>';
 
-									// Loop through the query results, outputing the options one by one
-									while ($row = mysqli_fetch_array($getCategories_result)) {
-										$categoryName = $row['Category'];
-										$categoryID = $row['ProjectCategoryID'];
-									echo "<option value='$categoryID'>$categoryName</option>";
-									}
+                    ?>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="formLabels">Task Type:</div>
+                    <select type="text" id="templateTaskType">
+                      <option value="Standard">Standard</option>
+                      <option value="Cadence">Cadence</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="formLabels">Members: (Use the @ symbol to find a user.)</div>
+                    <div id="showUsernames"></div>
+                    <input type="text" id="members" name="members">
+                    <br>
+                    <ol class="memberEmails">
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="formLabels">Tasks:</div>
+                    <?php
 
-									echo '</select>';
-
-								?>
-					</div>
-					<div class="col-sm-12">
-						<div class="formLabels">Task Type:</div>
-							<select type="text" id="templateTaskType">
-							<option value="Standard">Standard</option>
-							<option value="Cadence">Cadence</option>
-							</select>
-					</div>
-							<div class="col-sm-12">
-     			<div class="formLabels">Members: (Use the @ symbol to find a user.)</div>
-							<div id="showUsernames"></div>
-      			<input type="text" id="members" name="members">
-				<br>
-						<ol class="memberEmails"></ol>
-						</div>
-					</div>
-					</div>
-					
-					<div class="col-sm-6">
-						<div class="row">		
-     					
-						<div class="col-sm-12">
-							
-						<div class="formLabels">Tasks:</div>
-								
-								<?php
-
-								$getCategories = "SELECT * FROM `Task Categories` WHERE `GroupID` = '$groupID'";
-								$getCategories_result = mysqli_query($connection, $getCategories) or die ("Query to get data from Team task failed: ".mysql_error());
-										while ($row = mysqli_fetch_array($getCategories_result)) {
-										echo "<div class='tags' tasktypeid='" . $row['CategoryID'] ."'><i class='fa fa-plus-circle' aria-hidden='true'></i><span>".$row['Category']."</span></div>";
-										}
-										echo "<div class='tags red_bg' style='color:#ffffff'>Clear All</div>";
-								?>
-								<br>
-								<div id="addTasks"></div>
-
-						</div>
-     				</div>
-					</div>
-						
-					
-					</div>
-    				<br>
-     				<div class="row">	
-      		<div class="col-sm-12 text-right"><button id="addNewProjectTemplate-btn" class="genericbtn green_bg" type="submit" name="new" style="margin-left: 0px;">Save</button><hr></div>
-     				</div>
-      				
-       		</div>
-       		</div>
-      				
-    			<div class="row">
-    			<div class="col-sm-12">
-     			<!--<div class="pull-right"><select name="sortBy" id="sortBy" style="margin-top: 10px !important;">
+                    $getCategories = "SELECT * FROM `Task Categories` WHERE `GroupID` = '$groupID'";
+                    $getCategories_result = mysqli_query( $connection, $getCategories )or die( "Query to get data from Team task failed: " . mysql_error() );
+                    while ( $row = mysqli_fetch_array( $getCategories_result ) ) {
+                      echo "<div class='tags' tasktypeid='" . $row[ 'CategoryID' ] . "'><i class='fa fa-plus-circle' aria-hidden='true'></i><span>" . $row[ 'Category' ] . "</span></div>";
+                    }
+                    echo "<div class='tags red_bg' style='color:#ffffff'>Clear All</div>";
+                    ?>
+                    <br>
+                    <div id="addTasks"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-12 text-right">
+                <button id="addNewProjectTemplate-btn" class="genericbtn green_bg" type="submit" name="new" style="margin-left: 0px;">Save</button>
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12"> 
+            <!--<div class="pull-right"><select name="sortBy" id="sortBy" style="margin-top: 10px !important;">
      			<option value="Date Created DESC">Most Recent</option>
      			<option value="Date Created ASC">Least Recent</option>
      			<option value="Due Date DESC">Due Date DESC</option>
      			<option value="Due Date ASC">Due Date ASC</option>
      			<option value="AtoZ">A to Z</option>
      			<option value="ZtoA">Z to A</option></select></div>
-   				</div>	-->	
-    							<div id="printBack">
-     							
-								</div>
-							
-      			</div>
-       		</div>
-       		
-       		</div>
-       		
-       		
-       			
-       </div>
-        
-       
-	</div>
-</div>    
-<!-- EDIT TEMPLATE MODAL -->
-<div class="modal fade" id="editTemplate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
-        <h4 class="modal-title" id="myModalLabel">View Template</h4>
+   				</div>	-->
+            <div id="printBack"> </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        		<div class="form-sm">
-        			<div class="row">
-        				
-						<div class="col-sm-6">
-							<div class="formLabels">Template Name:</div>
-							<div id="templateNameEdit"></div>
-							</select>
-						</div>
-						<div class="col-sm-6">
-							<div class="formLabels">Category:</div>
-							<div id="templateCategoryEdit"></div>
-						</div>
-  					</div>
-        			<div class="row">
-        				
-						<div class="col-sm-6"><br>
-							<div class="formLabels">Visibility:</div>
-							<div id="templateVisibleEdit"></div>
-						</div>
-						<div class="col-sm-6"><br>
-							<div class="formLabels">Task Type:</div>
-							<div id="templateTaskTypeEdit"></div>
-						</div>
-  					</div>
-  					<div class="row">
-        				
-      				<div class="col-sm-12"><br>
-    				<div class="formLabels">Members:</div>
-    				<div id="templateMembersEdit"></div>
-    				</div>
-    				</div>
-   					<div class="row">
-        				
-      				<div class="col-sm-12">
-						<hr>
-    				<div class="formLabels">Tasks:</div>
-    				<div id="templateTasksEdit"></div>
-    				</div>
-    				</div>
-    				
-     			</div>
-     		
-					
-      			<div class="modal-footer">
-       
-        
-         
-      </div>
-      </div>
-      
     </div>
   </div>
- <input type="hidden" id="holdingNotificationCount"> 
+</div>
+<!-- EDIT TEMPLATE MODAL -->
+<div class="modal fade" id="editTemplate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header"> <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+      <h4 class="modal-title" id="myModalLabel">View Template</h4>
+    </div>
+    <div class="modal-body">
+      <div class="form-sm">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="formLabels">Template Name:</div>
+            <div id="templateNameEdit"></div>
+            </select>
+          </div>
+          <div class="col-sm-6">
+            <div class="formLabels">Category:</div>
+            <div id="templateCategoryEdit"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6"><br>
+            <div class="formLabels">Visibility:</div>
+            <div id="templateVisibleEdit"></div>
+          </div>
+          <div class="col-sm-6"><br>
+            <div class="formLabels">Task Type:</div>
+            <div id="templateTaskTypeEdit"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12"><br>
+            <div class="formLabels">Members:</div>
+            <div id="templateMembersEdit"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <hr>
+            <div class="formLabels">Tasks:</div>
+            <div id="templateTasksEdit"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer"> </div>
+    </div>
+  </div>
+</div>
+<input type="hidden" id="holdingNotificationCount">
 <select style="display:none" id="calendarCategory">
-		<?php 
-									$query = "SELECT DISTINCT * FROM `Calendar Categories` ORDER BY `Category` ASC";
-									$query_result = mysqli_query($connection, $query) or die ("Query to get data from Team task failed: ".mysql_error());
-									while ($row = mysqli_fetch_array($query_result)) {
-										echo "<option value='".$row["CalendarCategoryID"]."'>".$row["Category"]." Event</option>";
-									}
-								?>
-		</select>
-    <?php echo $scripts?>
-    
-    
-    </body>
+  <?php
+  $query = "SELECT DISTINCT * FROM `Calendar Categories` ORDER BY `Category` ASC";
+  $query_result = mysqli_query( $connection, $query )or die( "Query to get data from Team task failed: " . mysql_error() );
+  while ( $row = mysqli_fetch_array( $query_result ) ) {
+    echo "<option value='" . $row[ "CalendarCategoryID" ] . "'>" . $row[ "Category" ] . " Event</option>";
+  }
+  ?>
+</select>
+<?php echo $scripts?>
+</body>
 </html>

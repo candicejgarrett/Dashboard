@@ -1,6 +1,6 @@
 <?php
 
-$emailCss= '
+$emailCss = '
   <style type="text/css">
 	  @import "https://fonts.googleapis.com/css?family=Roboto:300,400,700,900";
     /* Take care of image borders and formatting, client hacks */

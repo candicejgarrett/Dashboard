@@ -3,7 +3,7 @@
 
 //email headers 
 $headers = "From: no-reply@dashboard.coat.com/dashboard\r\n";
-$headers .= "Reply-To: candice.garrett@burlingtonstores.com\r\n";
+$headers .= "Reply-To: candicejgarrett@gmail.com\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 

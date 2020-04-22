@@ -68,10 +68,9 @@ if ( $myRole == 'Admin' || $myRole == 'Editor' || $memberID2 == $userI ) {
 #printActivities .feed-item p {
     color: #ffffff !important;
 }
-	
-	.hiding {
-		display:none;
-	}
+.hiding {
+    display: none;
+}
 </style>
 <script>
 	 $(document).ready(function(){
@@ -532,7 +531,7 @@ if ( $myRole == 'Admin' || $myRole == 'Editor' || $memberID2 == $userI ) {
                           </div>
                           <div class="col-sm-6 hiding">
                             <h4>Update</h4>
-                           <textarea id="requestCopyEdit"></textarea>
+                            <textarea id="requestCopyEdit"></textarea>
                             <br>
                             <button class="save pull-right" id="saveCopy"><i class="fa fa-floppy-o" aria-hidden="true"></i></button>
                           </div>

@@ -4,9 +4,9 @@ $settingsTopBar = "";
 
 //SETTINGS DROPDOWN
 //admin
-if ($myRole === 'Admin') {
-	
-	$settingsTopBar = "
+if ( $myRole === 'Admin' ) {
+
+  $settingsTopBar = "
 	<li>
 		<a href='/dashboard/users/me.php'>My Profile</a>
 	</li>
@@ -19,10 +19,9 @@ if ($myRole === 'Admin') {
 	<li>
 		<a href='/dashboard/logout.php'>Sign Out</a>
 	</li>";
-}
-else {
-	
-		$settingsTopBar = "
+} else {
+
+  $settingsTopBar = "
 	<li>
 		<a href='/dashboard/users/me.php'>My Profile</a>
 	</li>
@@ -32,8 +31,8 @@ else {
 	<li>
 		<a href='/dashboard/logout.php'>Sign Out</a>
 	</li>";
-	
-	
+
+
 }
 
 //END SETTINGS DROPDOWN
@@ -42,15 +41,14 @@ else {
 //getting Todo Info
 
 $query = "SELECT * FROM `Priority Levels`";
-$query_result = mysqli_query($connection, $query) or die ("1 failed: ".mysql_error());
-	
-	 while($row = $query_result->fetch_assoc()) {
-        $priorityLevelID = $row["levelID"];
-		$priorityTitle = $row["Title"];
-		$priorityColor = $row["Color"];
-		
-	 }
+$query_result = mysqli_query( $connection, $query )or die( "1 failed: " . mysql_error() );
 
+while ( $row = $query_result->fetch_assoc() ) {
+  $priorityLevelID = $row[ "levelID" ];
+  $priorityTitle = $row[ "Title" ];
+  $priorityColor = $row[ "Color" ];
+
+}
 
 
 echo "<a class='navbar-brand' href='/dashboard/'>Dashboard</a><div class='navbar-collapse'>
@@ -229,7 +227,7 @@ echo "<a class='navbar-brand' href='/dashboard/'>Dashboard</a><div class='navbar
 				<h1>Settings</h1>
 				</div>
 		<div class='printSettingsList'>
-		<ul>".$settingsTopBar."</ul>
+		<ul>" . $settingsTopBar . "</ul>
 		</div>
 		</div>
 	</div>
@@ -237,7 +235,6 @@ echo "<a class='navbar-brand' href='/dashboard/'>Dashboard</a><div class='navbar
  </ul>
  </div>
 ";
-
 
 
 ?>
