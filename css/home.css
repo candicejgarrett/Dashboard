@@ -1,0 +1,156 @@
+/* Variables */
+/* COLORS */
+/* Color Scheme */
+/* Statuses */
+/* MIXINS */
+.gradient {
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+}
+.gradient h1, .gradient h2, .gradient h3, .gradient h4, .gradient h5, .gradient h6, .gradient p, .gradient a {
+  color: #ffffff !important;
+}
+.gradient a {
+  text-decoration: underline;
+}
+
+.x-template-home .dragOverflow .prev, .x-template-home .dragOverflow .next {
+  font-size: 13px;
+  clear: both;
+  display: inline-block;
+  cursor: pointer;
+}
+.x-template-home .dragOverflow .prev span, .x-template-home .dragOverflow .next span {
+  font-size: 14px;
+  margin: 0px 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+.x-template-home .dragOverflow .prev .fa, .x-template-home .dragOverflow .next .fa {
+  display: inline-block;
+}
+.x-template-home .dragOverflow .prev {
+  text-align: left;
+  width: 50%;
+}
+.x-template-home .dragOverflow .next {
+  text-align: right;
+  width: 49%;
+}
+.x-template-home .dragContainer {
+  overflow: scroll;
+}
+.x-template-home .dragContainer .projectHorzScroll {
+  clear: both;
+  margin-top: 15px;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox {
+  width: 300px;
+  background: #ffffff;
+  padding: 15px;
+  color: #333;
+  display: none;
+  margin-right: 25px;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox a {
+  text-decoration: none !important;
+  color: #333 !important;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox a :hover {
+  text-decoration: none !important;
+  color: inherit;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox a.activeProjViewAll {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 24px;
+  height: 65px;
+  margin-top: -101px;
+  color: #ffffff;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox a.activeProjViewAll:hover {
+  color: #fff;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox .name {
+  font-size: 18px;
+  display: inline-block;
+  max-width: 276px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox .description {
+  font-size: 13px;
+  font-style: italic;
+  padding: 5px 0px 10px;
+  opacity: 0.7;
+  width: 267px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 33px;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox .percent {
+  font-size: 12px;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox .percent span {
+  font-weight: bold;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox .progressBar-container {
+  margin-top: 4px !important;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox .deadline {
+  background: #f1ebff;
+  margin-top: 15px;
+  padding: 10px;
+  width: 73%;
+  border-radius: 3px;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox .deadline h3, .x-template-home .dragContainer .projectHorzScroll .projectBox .deadline .fa {
+  color: #b294ff !important;
+  display: inline-block;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox .deadline .fa {
+  margin-right: 8px;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox .deadline h3 {
+  font-size: 16px;
+  margin: 0px;
+  font-weight: bold;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox .deadline h3 span {
+  color: #333;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox .deadline.lateProject {
+  background: rgba(255, 0, 0, 0.1);
+  color: #FF0000;
+}
+.x-template-home .dragContainer .projectHorzScroll .projectBox .deadline.lateProject h3, .x-template-home .dragContainer .projectHorzScroll .projectBox .deadline.lateProject .fa {
+  color: #FF0000 !important;
+}
+.x-template-home .doesntExist {
+  margin-top: 15px;
+  font-style: italic;
+}
+.x-template-home #upcomingEvents .fc-toolbar .fc-center h2 {
+  padding: 40px 0px 0px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.x-template-home .dataTable .taskStatus {
+  margin: 6px 0px;
+  display: inline-block;
+  width: auto;
+}
+.x-template-home #printFullTodoList {
+  display: none;
+}
+.x-template-home #printFullTodoList #printBackFullTodoList_filter {
+  display: none;
+}
+.x-template-home .noTasksDue {
+  display: none;
+}
+
+/*# sourceMappingURL=home.css.map */

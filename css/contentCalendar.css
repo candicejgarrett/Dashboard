@@ -1,0 +1,324 @@
+/* Variables */
+/* COLORS */
+/* Color Scheme */
+/* Statuses */
+/* MIXINS */
+.gradient {
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+}
+.gradient h1, .gradient h2, .gradient h3, .gradient h4, .gradient h5, .gradient h6, .gradient p, .gradient a {
+  color: #ffffff !important;
+}
+.gradient a {
+  text-decoration: underline;
+}
+
+a.fc-event {
+  color: #ffffff;
+}
+
+.fc-event {
+  color: #ffffff;
+  transition: all 0.3s ease;
+  background: #4801ff;
+  -webkit-box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.13);
+  border-radius: 0px !important;
+  padding: 4px !important;
+}
+.fc-event .dot {
+  height: 8px;
+  width: 8px;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+.fc-event .dot.new {
+  background: #ff6464;
+  border: 1px solid #FF0000;
+}
+.fc-event .dot.inReview {
+  background: #ff7e00;
+  border: 1px solid #ff6000;
+}
+.fc-event .dot.approved {
+  background: #aeff00;
+  border: 1px solid #0fcf00;
+}
+
+.fc-event.ready {
+  border-left: 7px solid #0fcf00;
+}
+
+.fc-event.notReady {
+  border-left: 7px solid #ff0000;
+}
+
+.fc-event-container .calendarHover {
+  display: none;
+  background: rgba(255, 255, 255, 0.89);
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5px;
+}
+.fc-event-container .calendarHover h1 {
+  color: #333;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100% !important;
+  text-overflow: ellipsis;
+}
+
+.calendarHover .formLabels {
+  font-weight: bold;
+}
+
+.fc-row .fc-content-skeleton tbody td, .fc-row .fc-helper-skeleton tbody td {
+  border-top: 0;
+  padding: 2px !important;
+}
+
+.fc-day-grid-event > .fc-content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+.border-event {
+  color: #333333 !important;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+}
+
+.fc-unthemed .fc-today {
+  background: #eaeaea !important;
+}
+
+.calendar {
+  width: 100%;
+}
+.calendar .header {
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  height: 10px;
+}
+.calendar .header tr {
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  height: 10px;
+}
+
+.calendar-day {
+  width: 14.28%;
+  height: 125px !important;
+  overflow: scroll !important;
+  border: 1px solid #f1f1f1;
+  vertical-align: top;
+  padding: 5px;
+  overflow-y: auto;
+}
+
+.calendar-day-head {
+  height: 1px !important;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+#today {
+  font-weight: bold;
+  color: #ff0000;
+}
+
+#calendar {
+  width: 100%;
+  display: none;
+}
+
+.x-content-calendar {
+  /* FILTER */
+  /* END FILTER */
+  /* SEARCH */
+  /* END SEARCH */
+}
+.x-content-calendar #trash {
+  width: 32px;
+  height: 32px;
+  float: left;
+  padding-bottom: 15px;
+  position: relative;
+}
+.x-content-calendar #wrap {
+  width: 1100px;
+  margin: 0 auto;
+}
+.x-content-calendar #ccSearchResults {
+  width: 100%;
+  padding: 10px;
+  margin-top: -15px;
+  overflow: scroll;
+  overflow-y: auto;
+  max-height: 300px;
+  margin-left: 0px;
+}
+.x-content-calendar #ccSearchResults p {
+  margin: 20px;
+  font-size: 14px;
+  font-style: italic;
+}
+.x-content-calendar #ccSearchResultsContainer {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-top: -10px;
+  background: #f1f1f1;
+  display: none;
+  min-height: 550px;
+  position: absolute;
+  z-index: 30;
+  -webkit-box-shadow: 0px 9px 22px -5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 9px 22px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 9px 22px -5px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+.x-content-calendar #ccSearchResultsContainer h3 {
+  font-size: 16px;
+  padding: 15px;
+  margin-bottom: 0px;
+}
+.x-content-calendar #closeSearchResults, .x-content-calendar #closeTopSearchResults {
+  cursor: pointer;
+  padding: 3px 5px;
+  font-size: 12px;
+  color: #aaa;
+  border: 1px solid #aaa;
+  border-radius: 500px;
+  margin: 4px 10px 4px 0px;
+  font-weight: 100;
+}
+.x-content-calendar #closeTopSearchResults {
+  margin-top: 15px;
+}
+.x-content-calendar .eventLabels {
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-align: center;
+  color: #ffffff;
+  display: inline-block;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-right: 20px;
+}
+.x-content-calendar #missingEvent {
+  padding: 50px 20px;
+  display: none;
+}
+.x-content-calendar input {
+  font-size: 14px !important;
+}
+.x-content-calendar a.ccPreviewImage {
+  max-height: 500px;
+  overflow: scroll;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #eaeaea;
+  margin-bottom: 15px;
+}
+.x-content-calendar .previewImage {
+  width: 100%;
+  display: inline-block;
+  margin: 0 auto;
+}
+.x-content-calendar #addEventPreviewImage, .x-content-calendar #addEventPreviewImageMobile {
+  width: 60% !important;
+  display: inline-block;
+}
+.x-content-calendar #previewEventInfo .formLabels {
+  margin-top: 20px;
+}
+.x-content-calendar #newEvent .myTabs li a {
+  font-size: 12px !important;
+}
+.x-content-calendar .eventFilter {
+  display: inline-block;
+  margin-bottom: 25px;
+  min-width: 150px;
+}
+.x-content-calendar .eventFilter .unchecked {
+  background: #ffffff !important;
+}
+.x-content-calendar .eventFilter .eventCheckbox {
+  display: inline-block;
+  padding: 0px;
+  cursor: pointer;
+  margin-right: 7px;
+  color: #ffffff;
+  text-align: center;
+}
+.x-content-calendar .eventFilter .eventCheckboxLabel {
+  vertical-align: middle;
+  display: inline-block;
+}
+.x-content-calendar #specifyDate, .x-content-calendar #specifyDateCancel {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 5px 20px;
+  border-radius: 3px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  width: 130px;
+  text-align: center;
+  cursor: pointer;
+}
+.x-content-calendar #specifyDate {
+  color: #4801FF;
+  background: #ffffff;
+}
+.x-content-calendar #specifyDateCancel {
+  display: none;
+  color: #ffffff;
+  background: #FF0000;
+  margin-left: 4px;
+  border: 0px;
+}
+.x-content-calendar #specifyDateContainer {
+  display: none;
+}
+.x-content-calendar #specifyDateContainer input {
+  background: #ffffff !important;
+}
+.x-content-calendar #specifyDateContainer .col-sm-6 {
+  margin-top: 15px;
+}
+.x-content-calendar .filterContainer {
+  margin: 15px;
+}
+.x-content-calendar .filterContainer hr {
+  border-top: 1px solid #ccc !important;
+  margin: 15px 0px !important;
+}
+.x-content-calendar #viewEvent #printCTAs {
+  width: 100%;
+  text-align: right;
+  border-top: 1px solid #f1f1f1;
+  padding-top: 15px;
+}
+
+/*# sourceMappingURL=contentCalendar.css.map */

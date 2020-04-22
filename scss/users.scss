@@ -1,0 +1,70 @@
+@import "_defaults";
+
+.x-template-users {
+	#changeProfilePictureBtn {
+	position: absolute;
+    color: #ffffff;
+    margin-left: 68%;
+    margin-top: 220px;
+	}
+	
+	#noUserPage{
+	display:none;
+}
+	
+	.largeRoundPP {
+			height: 100px;
+			width: 100px;
+			display: block;
+			overflow: hidden;
+			border-radius: 50%;
+		}
+
+	
+	
+.userCardHeader {
+	padding:15px;
+	@include primaryGradientBG;
+	color:#ffffff;
+	margin-bottom:20px;
+	
+	a {color:#ffffff}
+	a:hover {color:#ffffff}
+	
+	h3 { 
+	text-align: center;
+    font-size: 20px;
+    font-weight: bold;}	
+}
+
+.userCard {background:#ffffff;min-height:315px;margin-bottom:15px;border:2px solid #eaeaea;
+	
+	h5 {
+	    font-weight: bold;
+    font-style: italic;
+    padding-top: 5px;
+}
+	
+	img {
+	    width: 100%;
+    
+}
+	
+	.viewMore {
+	border:2px solid #e8eeff;
+	padding: 6px 10px;
+	border-radius:3px;
+	cursor:pointer;
+	background:#ffffff;
+}
+	
+	.viewMore:active {
+	background-image: linear-gradient(to bottom, #dfe9f3 0%, white 100%);
+}	
+	
+    }
+
+
+	
+	
+}

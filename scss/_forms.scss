@@ -1,0 +1,244 @@
+@import "_defaults";
+
+.formLabels {
+	color:$primaryColor;
+	text-transform: uppercase;
+	padding-bottom:5px;
+	font-size:12px;
+	font-weight:400;
+}
+
+
+input[type="file"] {
+	font-size:14px;
+}
+input[type='checkbox']:checked {
+    background: #333;
+}
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none !important; 
+  margin: 0 !important; 
+}
+
+select { width: 100%;border: 1px solid #ccc !important;
+    background: none !important;
+    margin-bottom: 10px !important;
+    padding: 7px !important;
+	 -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+	border-radius:none !important;}
+
+input:focus,select:focus,textarea:focus {
+	border: 1px solid $primaryColor !important;
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+:focus::-webkit-input-placeholder { /* Edge */
+  color: #ffffff;
+}
+
+:focus:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #ffffff;
+}
+
+:focus::placeholder {
+  color: #ffffff;
+}
+input, textarea {
+    border: 1px solid #ccc !important;
+    background: none !important;
+    margin-bottom: 10px !important;
+    padding: 7px;
+	width: 100%;
+	font-size: 12px;
+	color:#333 !important;
+}
+
+.calendarPicker {border:none !important; font-size:25px; font-weight:bold;     width: 156px;
+    height: 58px;}
+
+/* FORM VALIDATIONS */
+
+.validate p {color:$status_new !important;font-weight: bold;}
+.required {border:1px solid $status_new !important;}
+
+input.required,select.required,textarea.required {
+border:1px solid $status_new;
+background: $status_new_bg !important;	
+}
+
+.required::-webkit-input-placeholder { /* Edge */
+  color: #000000;
+	font-style:italic;
+}
+
+.required:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #000000;
+	font-style:italic;
+}
+
+.required::placeholder {
+  color: #000000;
+	font-style:italic;
+}
+
+/* failed styles */
+
+.failed {
+	background: $status_new !important;
+	color:#ffffff;
+	transition:all 0.5s ease !important;
+	-webkit-animation: shake 0.3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: shake 0.3s; /* Firefox < 16 */
+        -ms-animation: shake 0.3s; /* Internet Explorer */
+         -o-animation: shake 0.3s; /* Opera < 12.1 */
+            animation: shake 0.3s;
+}
+
+.newMarkup.failed,.saveMarkup.failed {
+	background: $status_new !important;
+	color:#ffffff;
+	    padding-top: 7px;
+	margin-top:0px;
+	transition:all 0.5s ease !important;
+	-webkit-animation: shake 0.3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: shake 0.3s; /* Firefox < 16 */
+        -ms-animation: shake 0.3s; /* Internet Explorer */
+         -o-animation: shake 0.3s; /* Opera < 12.1 */
+            animation: shake 0.3s;
+}
+
+/*confirm styles */
+.deleteConfirm {
+	transition:all 0.5s ease !important;
+}
+
+.blogPost .checkForConfirm {
+width:100% !important;	
+}
+
+.checkForConfirm {
+	width: 153px !important;
+    border-radius: 20px !important;
+	text-align:left;
+	float: right;
+}
+
+.deleteConfirm.successConfirm {
+	background:$status_complete !important;
+	color:#ffffff !important;
+	text-transform: uppercase;
+	font-weight:bold;
+}
+
+.deleteConfirm .acceptConfirm {
+	float: left;
+    margin-left: 1px;
+    background: #ffffff;
+    color: $status_new;
+    padding: 2px 15px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+	cursor: pointer;
+	display:none;
+}
+
+.deleteConfirm .cancelConfirm {
+	float: right;
+    background: $baseColor;
+    padding: 4px 5px;
+    border-radius: 50%;
+    cursor: pointer;
+	display:none;
+}
+
+.deleteConfirm .successfulConfirm {
+	    float: right;
+    background: #ffffff !important;
+    padding: 4px 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: $status_complete;
+	-webkit-animation: bounceIn 0.5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: bounceIn 0.5s; /* Firefox < 16 */
+        -ms-animation: bounceIn 0.5s; /* Internet Explorer */
+         -o-animation: bounceIn 0.5s; /* Opera < 12.1 */
+            animation: bounceIn 0.5s;
+}
+/* END confirm styles */
+
+/* END FORM VALIDATIONS */
+
+/* login */
+
+.login input[type="text"],
+.login input[type="date"],
+.login input[type="datetime"],
+.login input[type="email"],
+.login input[type="number"],
+.login input[type="search"],
+.login input[type="time"],
+.login input[type="url"],
+.login input[type="password"],
+.login textarea,
+.login select {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 215px;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    background: transparent;
+    margin-bottom: 10px;
+    height: 45px;	
+}
+/*end login */
+
+#copyLinkInput {
+	height: 0px;
+    font-size: 1px;
+    border: 0px !important;
+    padding: 0px !important;
+}
+
+
+.reviewerEmails,.accessEmails,.showAccessEmails,.memberEmails {
+	margin:0px 0px 0px 15px;
+	padding:0px;
+	font-weight:bold;
+	
+	li .removeReviewer,.memberEmails .removeReviewer{
+		cursor:pointer;
+		color:$status_new;
+			font-size: 16px;
+		padding-top: 3px;
+	}
+}
+
+.reviewerEmails li,.accessEmails li,.memberEmails li{
+	     padding: 5px 10px;
+    background: $mutedPrimaryColor;
+    border-radius: 3px;
+	    margin-bottom: 8px;
+}
+
+.showAccessEmails li{
+	     padding: 5px 10px;
+    background: #e6ffe6;
+    border-radius: 3px;
+	    margin-bottom: 8px;
+}
+
+#showUsernames,.showUsernames {
+	display:none;
+	margin-bottom: 7px;
+}

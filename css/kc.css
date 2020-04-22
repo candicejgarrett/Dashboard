@@ -1,0 +1,152 @@
+/* Variables */
+/* COLORS */
+/* Color Scheme */
+/* Statuses */
+/* MIXINS */
+.gradient {
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+}
+.gradient h1, .gradient h2, .gradient h3, .gradient h4, .gradient h5, .gradient h6, .gradient p, .gradient a {
+  color: #ffffff !important;
+}
+.gradient a {
+  text-decoration: underline;
+}
+
+.x-template-kc #addTagsContainer {
+  display: none;
+  width: auto;
+  clear: both;
+  margin: 0px 14px;
+}
+.x-template-kc #addTagsContainer input {
+  margin-bottom: 0px !important;
+  width: 200px;
+}
+.x-template-kc #printPostTags {
+  margin-bottom: 10px;
+}
+.x-template-kc .editTags {
+  background: #fff;
+  padding: 16px;
+  border: 2px solid #dee2ff;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 10px 30px -20px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: 1px 10px 30px -20px rgba(0, 0, 0, 0.83);
+  box-shadow: 8px 10px 13px -21px rgba(0, 0, 0, 0.83);
+  display: inline;
+}
+.x-template-kc .selectTags {
+  display: inline-block;
+  float: right;
+}
+.x-template-kc .selectTags span {
+  color: #4801FF;
+  text-decoration: underline;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 10px 12px;
+  display: inline-block;
+  cursor: pointer;
+}
+.x-template-kc .deleteTagIcon {
+  color: #4801FF;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.x-template-kc .deletedTag {
+  opacity: 0.6;
+  text-decoration: line-through;
+  background: #e0e0e0 !important;
+}
+.x-template-kc .deletedTag .deleteTagIcon {
+  color: #333;
+}
+.x-template-kc .deletedTag .addTagIcon {
+  display: none;
+}
+.x-template-kc .addTagIcon {
+  display: none;
+}
+.x-template-kc .addedTag {
+  opacity: 1;
+  text-decoration: none;
+  background: #4801FF !important;
+  color: #ffffff;
+}
+.x-template-kc .addedTag .addTagIcon {
+  color: #ffffff;
+  margin-left: 10px;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.x-template-kc .addedTag .deleteTagIcon {
+  display: none;
+}
+.x-template-kc .lastUpdated {
+  font-size: 12px;
+  color: #7918f2;
+  font-style: italic;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+.x-template-kc .clear {
+  background: #FF0000;
+  color: #ffffff !important;
+}
+.x-template-kc .blogPost {
+  border-bottom: 1px solid #f1f1f1;
+  padding: 0px 0px 15px 0px;
+}
+.x-template-kc .blogPost .KCTags {
+  cursor: auto;
+}
+.x-template-kc .blogPost .date {
+  color: #333 !important;
+}
+.x-template-kc .creatorInfo {
+  text-align: center;
+  margin-top: 23px;
+}
+.x-template-kc .creatorInfo a {
+  color: #333;
+}
+.x-template-kc .creatorInfo a.primaryColorBG {
+  color: #fff;
+}
+.x-template-kc .creatorInfo h1 {
+  font-size: 14px;
+  margin: 0px;
+}
+.x-template-kc .creatorInfo h3 {
+  font-size: 14px;
+  margin: 0px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.x-template-kc .creatorInfo img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 1px 10px 30px -20px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: 1px 10px 30px -20px rgba(0, 0, 0, 0.83);
+  box-shadow: 8px 10px 13px -21px rgba(0, 0, 0, 0.83);
+}
+.x-template-kc .creatorInfo .remove {
+  padding-top: 10px;
+  margin-left: 0px;
+}
+.x-template-kc .creatorInfo .remove.checkForConfirm {
+  padding: 7px;
+  margin-top: 17px;
+}
+
+/*# sourceMappingURL=kc.css.map */

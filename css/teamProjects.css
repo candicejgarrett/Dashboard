@@ -1,0 +1,947 @@
+/* Variables */
+/* COLORS */
+/* Color Scheme */
+/* Statuses */
+/* MIXINS */
+.gradient {
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+}
+.gradient h1, .gradient h2, .gradient h3, .gradient h4, .gradient h5, .gradient h6, .gradient p, .gradient a {
+  color: #ffffff !important;
+}
+.gradient a {
+  text-decoration: underline;
+}
+
+.x-team-projects {
+  /* The switch - the box around the slider */
+  /*CADENCE */
+  /*END CADENCE */
+  /* MEMBERS */
+  /* END MEMBERS */
+  /* ACTIVITY FEED */
+  /* END ACTIVITY FEED */
+  /* NOTES */
+  /* END NOTES */
+  /* FILES */
+  /* end FILES */
+  /*TEMPLATES */
+  /*END TEMPLATES */
+}
+.x-team-projects .project {
+  color: #ffffff !important;
+  height: 359px;
+  padding-bottom: 30px;
+  background: #3700c5;
+  margin-bottom: 30px;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.x-team-projects .project h4 {
+  color: #3700c5 !important;
+  background: #ffffff;
+  width: 146px;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px !important;
+  font-weight: bold;
+  padding: 5px 5px !important;
+  margin-top: 0px !important;
+  margin-bottom: 20px !important;
+  text-align: center !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.x-team-projects .project .getprojectCreatorFN {
+  font-style: italic;
+}
+.x-team-projects .project .projectDueDate1 {
+  background: #e00000 !important;
+  padding: 5px 15px;
+  color: #ffffff;
+  font-size: 12px;
+  text-transform: uppercase;
+  width: 117px;
+  border-radius: 3px;
+}
+.x-team-projects .project p {
+  color: #ffffff;
+  padding: 10px;
+}
+.x-team-projects .project .heading {
+  padding: 10px;
+}
+.x-team-projects .project .heading h1 {
+  color: #ffffff;
+  font-size: 24px;
+  text-align: left;
+  margin-top: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 99%;
+  text-overflow: ellipsis;
+  transition: all 0.3s ease;
+}
+.x-team-projects .project .heading h4 {
+  color: #ffffff;
+  font-size: 16px;
+  text-align: left;
+  padding: 0px;
+  margin-bottom: 10px;
+}
+.x-team-projects .project .information {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px 25px 20px 10px;
+}
+.x-team-projects .project .information p {
+  color: #ffffff;
+  padding: 0px;
+  text-align: center;
+}
+.x-team-projects .project .information h1 {
+  color: #ffffff;
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.x-team-projects .project .information i {
+  opacity: 0.7;
+  font-weight: normal !important;
+}
+.x-team-projects .project .information h2 {
+  color: #ffffff;
+}
+.x-team-projects .project .project-btn, .x-team-projects .project .project-btn:focus, .x-team-projects .project .project-btn:active {
+  border-radius: 46px;
+  background: none;
+  color: #ffffff !important;
+  padding: 6px 15px;
+  text-align: center;
+  border: 2px solid #ffffff !important;
+  width: 75px;
+  transition: all 0.5s ease;
+  display: block;
+  margin-bottom: 20px;
+}
+.x-team-projects .project .project-btn:hover {
+  color: #ffffff;
+  text-decoration: none !important;
+  width: 115px;
+}
+.x-team-projects .project:hover, .x-team-projects .hover:hover {
+  -webkit-box-shadow: 1px 10px 70px -20px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: 1px 10px 70px -20px rgba(0, 0, 0, 0.83);
+  box-shadow: 1px 10px 70px -20px rgba(0, 0, 0, 0.83);
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+.x-team-projects .project_Archived {
+  background: #475059;
+  background: -moz-linear-gradient(top, #475059 0%, #2a3035 100%);
+  background: -webkit-linear-gradient(top, #475059 0%, #2a3035 100%);
+  background: linear-gradient(to bottom, #475059 0%, #2a3035 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#475059", endColorstr="#2a3035",GradientType=0 );
+}
+.x-team-projects .projectLoad {
+  display: none;
+  width: 80% !important;
+  padding-right: 0px !important;
+  z-index: 10;
+  transition: 0.3s;
+}
+.x-team-projects #printCopyLink {
+  margin-top: 20px;
+  clear: both;
+  display: block;
+  float: right;
+  width: 135px;
+}
+.x-team-projects #editTaskModal, .x-team-projects #viewTaskModal, .x-team-projects #editTaskModal-btn {
+  display: none;
+}
+.x-team-projects #taskStatusView strong, .x-team-projects #printEventStatus strong, .x-team-projects #printReviewStatus strong {
+  margin-top: 1px;
+  float: left;
+}
+.x-team-projects #editTask .modal-body, .x-team-projects #viewTask .modal-body {
+  display: none !important;
+}
+.x-team-projects .heart, .x-team-projects .heart2 {
+  font-size: 20px;
+  padding-top: 4px;
+  padding-right: 10px;
+}
+.x-team-projects #hearticon {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.x-team-projects #hearticon:hover, .x-team-projects #hearticon2:hover {
+  color: #ff5dad !important;
+  -webkit-text-stroke-width: 1px !important;
+  -webkit-text-stroke-color: #ff5dad !important;
+}
+.x-team-projects .heartEmpty {
+  color: #fff !important;
+  -webkit-text-stroke-width: 1px !important;
+  -webkit-text-stroke-color: black !important;
+}
+.x-team-projects .heartFilled {
+  color: #ff5dad !important;
+  -webkit-text-stroke-width: 1px !important;
+  -webkit-text-stroke-color: #ff5dad !important;
+}
+.x-team-projects #favMessage, .x-team-projects #favMessage2 {
+  font-size: 12px;
+  font-style: italic;
+  display: none;
+}
+.x-team-projects #printProjectCopy {
+  max-height: 500px;
+  overflow: scroll;
+  border: 1px solid #f1f1f1;
+  padding: 10px;
+  background: #fafafa;
+  overflow-y: auto;
+}
+.x-team-projects .statusSelectorContainer {
+  width: 100%;
+}
+.x-team-projects .statusSelectorContainer .statusSelector {
+  width: 24.3%;
+  display: inline-block;
+  padding: 10px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  margin: 0px !important;
+  text-align: center;
+  font-weight: 700;
+  background: rgba(204, 204, 204, 0.3);
+  color: #C6C6C6;
+  border: 1px solid #c6c6c6;
+  cursor: pointer;
+}
+.x-team-projects .reassignTaskContainer {
+  display: inline-block;
+  width: 67%;
+  float: right;
+  overflow: scroll;
+}
+.x-team-projects .reassignTaskContainer p {
+  display: none;
+}
+.x-team-projects .reassignTaskContainer .reassignTaskInnerDiv {
+  display: none;
+  width: 100%;
+  height: 54px;
+  border-radius: 4px;
+  overflow: scroll;
+}
+.x-team-projects .reassignTaskContainer .reassignTaskInnerDiv p {
+  display: inline;
+}
+.x-team-projects .reassignTaskContainer .reassignTaskInnerDiv .reassignTaskTo {
+  padding: 8px 0px 0px 5px;
+  width: 130%;
+  overflow: scroll;
+  height: 52px;
+}
+.x-team-projects .reassignTaskContainer .reassignTaskInnerDiv .reassignTaskTo .projectMember {
+  background: #ffffff;
+  width: auto;
+  padding: 2px 10px 2px 0px;
+  border: 2px solid #4801FF !important;
+}
+.x-team-projects .reassignTaskContainer .reassignTaskInnerDiv .reassignTaskTo .projectMember img {
+  border: 2px solid #4801FF !important;
+}
+.x-team-projects .reassignTaskContainer .reassignTaskInnerDiv .reassignTaskTo .projectMember p {
+  display: inline-block;
+  padding-left: 13px !important;
+  color: #333 !important;
+}
+.x-team-projects .reassignTaskContainer .reassignTaskInnerDiv .reassignTaskTo .projectMember:hover {
+  background: #333 !important;
+  border: 2px solid #333 !important;
+}
+.x-team-projects .reassignTaskContainer:visible {
+  background: rgba(255, 255, 255, 0.19);
+  height: 77px;
+  padding: 5px 8px 0px;
+  border-radius: 4px;
+  margin-top: -4px;
+}
+.x-team-projects .canReassignTask {
+  transition: all 0.5s ease;
+  padding: 3px 10px;
+  margin-left: -10px;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.x-team-projects .canReassignTask:hover {
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  padding: 3px 10px;
+  margin-left: -10px;
+  display: inline-block;
+}
+.x-team-projects .formLabels .dot {
+  display: none;
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+  height: 8px !important;
+  width: 8px !important;
+  border-radius: 50px;
+  margin-bottom: -5px;
+  margin-right: 5px;
+}
+.x-team-projects .noProject #printMembers {
+  max-height: 300px;
+  overflow-x: scroll;
+}
+.x-team-projects .toggler {
+  width: 217px;
+  border-radius: 25px !important;
+  border: 2px solid #e0e0e0 !important;
+  background: white;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#eeeeee",GradientType=0 );
+  padding: 2px !important;
+  -webkit-box-shadow: inset 0px 0px 20px -7px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: inset 0px 0px 20px -7px rgba(0, 0, 0, 0.48);
+  box-shadow: inset 0px 0px 20px -7px rgba(0, 0, 0, 0.48);
+}
+.x-team-projects .toggler.nav > li:not(.active) > a:hover {
+  text-decoration: none;
+  background: #505050;
+  color: #ffffff !important;
+}
+.x-team-projects .toggler > li > a {
+  border-radius: 25px !important;
+  color: #333 !important;
+  text-align: center;
+  transition: all 0.8s ease;
+}
+.x-team-projects .toggler > li {
+  width: 32%;
+  display: inline-block !important;
+  line-height: 20px;
+}
+.x-team-projects .toggler > li.active > a {
+  color: #fff !important;
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+}
+.x-team-projects .switch {
+  position: relative;
+  display: inline-block;
+  width: 65px;
+  height: 26px;
+  float: right;
+  margin-left: 20px;
+  margin-top: 5px;
+  /* The slider */
+  /* Rounded sliders */
+}
+.x-team-projects .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.x-team-projects .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.x-team-projects .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #ffffff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.x-team-projects .switch input:checked + .slider {
+  background-color: #5fca00;
+}
+.x-team-projects .switch input:focus + .slider {
+  box-shadow: 0 0 1px #5fca00;
+}
+.x-team-projects .switch input:checked + .slider:before {
+  -webkit-transform: translateX(39px);
+  -ms-transform: translateX(39px);
+  transform: translateX(39px);
+}
+.x-team-projects .switch .slider.round {
+  border-radius: 34px;
+}
+.x-team-projects .switch .slider.round:before {
+  border-radius: 50%;
+}
+.x-team-projects .printTasks, .x-team-projects .projectTasks {
+  width: 100%;
+}
+.x-team-projects .TasksHeader {
+  color: #000 !important;
+  background: #f1f1f1;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.x-team-projects .TasksHeader th {
+  border-right: 1px solid #eaeaea;
+  width: 20%;
+  padding: 7px !important;
+  font-size: 14px;
+  text-align: center;
+}
+.x-team-projects .TasksHeader .highLight {
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+  color: #ffffff !important;
+}
+.x-team-projects .TasksHeader td {
+  padding: 10px !important;
+  border: 1px solid #f1f1f1;
+  width: 20%;
+  font-size: 14px;
+}
+.x-team-projects #printMyTasks .infoicon, .x-team-projects #printMyTasks .editicon, .x-team-projects #printMyTasks .trashicon, .x-team-projects #printMyTasks .calendaricon, .x-team-projects #printTasks .infoicon, .x-team-projects #printTasks .editicon, .x-team-projects #printTasks .trashicon, .x-team-projects #printTasks .calendaricon {
+  padding: 5px;
+  color: #333 !important;
+  display: inline-block;
+  margin: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+.x-team-projects #printMyTasks .infoicon:hover, .x-team-projects #printMyTasks .editicon:hover, .x-team-projects #printMyTasks .calendaricon:hover, .x-team-projects #printTasks .infoicon:hover, .x-team-projects #printTasks .editicon:hover, .x-team-projects #printTasks .calendaricon:hover {
+  -webkit-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.28);
+  background: #f5f5f5;
+}
+.x-team-projects #printMyTasks .trashicon:hover, .x-team-projects #printTasks .trashicon:hover {
+  color: #FF0004 !important;
+  -webkit-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.28);
+  background: #f5f5f5;
+}
+.x-team-projects #printMyTasks td, .x-team-projects #printTasks td {
+  padding: 10px !important;
+  border: 1px solid #f1f1f1;
+  width: 20%;
+  font-size: 14px;
+}
+.x-team-projects #printMyTasks .dot, .x-team-projects #printTasks .dot {
+  font-size: 12px;
+  opacity: 0.4;
+  color: #4801FF;
+  font-weight: bold;
+}
+.x-team-projects #printMyTasks .dot .fa, .x-team-projects #printTasks .dot .fa {
+  font-size: 15px;
+  color: #4801FF;
+  margin-right: 3px;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+.x-team-projects #printMyTasks .taskCategory, .x-team-projects #printTasks .taskCategory {
+  display: block;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #4801FF;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.x-team-projects #printMyTasks .taskAssignedTo, .x-team-projects #printTasks .taskAssignedTo {
+  display: block;
+  font-size: 12px;
+  color: #707070;
+  padding-top: 5px;
+}
+.x-team-projects #printMyTasks .taskAssignedTo span, .x-team-projects #printTasks .taskAssignedTo span {
+  color: #AC32E4;
+}
+.x-team-projects .projectActivityFeed {
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+  width: 1% !important;
+  margin: 0px;
+  padding: 0px !important;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+  z-index: 19;
+}
+.x-team-projects .projectActivityFeed h3 {
+  writing-mode: tb-rl;
+  margin: 0px;
+  font-size: 18px;
+  opacity: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0px;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 2;
+  transition: all 0.3s ease;
+}
+.x-team-projects .projectActivityFeed .scroll {
+  display: none;
+}
+.x-team-projects .projectActivityFeed:not(.active):hover {
+  width: 2.4% !important;
+}
+.x-team-projects .projectActivityFeed:not(.active):hover > h3 {
+  opacity: 1;
+}
+.x-team-projects .projectActivityFeed.active h3 {
+  font-size: 18px;
+  opacity: 1;
+}
+.x-team-projects .slideLeft {
+  position: absolute;
+  z-index: -10;
+  margin-left: -5%;
+}
+.x-team-projects .slideRight {
+  position: absolute;
+  right: 10px;
+  width: 24.3% !important;
+}
+.x-team-projects .slideRight.projectActivityFeed h3 {
+  writing-mode: unset;
+  height: auto;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ffffff;
+  line-height: 2;
+}
+.x-team-projects #addNewMembers, .x-team-projects #showMessage {
+  display: none;
+}
+.x-team-projects #printFiles {
+  margin-right: 0px;
+}
+.x-team-projects #printFiles .col-sm-3 {
+  float: none !important;
+  display: inline-block;
+}
+.x-team-projects #printReviews.printFiles .muted {
+  font-size: 12px;
+  display: block;
+  margin-top: 2px;
+}
+.x-team-projects #printReviews.printFiles .editReview {
+  margin-right: 10px;
+}
+.x-team-projects .file {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 20px 20px 30px 20px;
+  margin-top: 10px;
+}
+.x-team-projects .file .content {
+  display: inline-block;
+  float: right;
+}
+.x-team-projects .file .content a {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline;
+  font-size: 14px;
+}
+.x-team-projects .file p {
+  font-size: 12px;
+}
+.x-team-projects .file .delete_link {
+  color: #FF0000 !important;
+  font-weight: 400;
+  z-index: 4000;
+  position: absolute;
+  right: 0;
+  top: 15px;
+  font-size: 17px;
+  margin-right: 22px;
+  width: auto !important;
+}
+.x-team-projects .file .fileIcon {
+  display: inline-block;
+  opacity: 0.1;
+  padding-right: 10px;
+  font-size: 30px;
+  float: left;
+}
+.x-team-projects .make100 {
+  width: 100% !important;
+}
+.x-team-projects #cadence {
+  margin-top: 20px;
+}
+.x-team-projects #cadence .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.x-team-projects #cadence .row > [class*=col-] {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margin-bottom: 20px;
+}
+.x-team-projects .cadenceContainer {
+  height: 100%;
+  margin: 2px;
+  cursor: pointer;
+}
+.x-team-projects .cadenceContainer .cadence {
+  text-align: left;
+  border-top: 5px solid #ccc;
+  height: 100%;
+  padding: 15px 15px 15px;
+  background: rgba(204, 204, 204, 0.1);
+}
+.x-team-projects .cadenceContainer .cadence .contain1 {
+  clear: both;
+}
+.x-team-projects .cadenceContainer .cadence .contain2 {
+  clear: both;
+  bottom: 15px;
+}
+.x-team-projects .cadenceContainer .cadence .timelineStatus:empty {
+  display: block;
+}
+.x-team-projects .cadenceContainer .cadence .category {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 12px;
+  padding: 10px 0px 0px 0px;
+}
+.x-team-projects .cadenceContainer .cadence .cadenceStatus {
+  text-transform: uppercase;
+  font-weight: bold;
+  float: right;
+}
+.x-team-projects .cadenceContainer .cadence .icon {
+  position: absolute;
+  display: block;
+  clear: both;
+  padding-top: 10px;
+  color: #ffffff;
+  top: -14px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  width: 35px;
+  float: left;
+  height: 35px;
+  text-align: center;
+}
+.x-team-projects .cadenceContainer .cadence h1 {
+  clear: both;
+  margin: 0px;
+  padding: 0px 0px 20px 0px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+}
+.x-team-projects .cadenceContainer .cadence p {
+  margin: 0px;
+  font-size: 12px;
+  text-align: left;
+}
+.x-team-projects .cadenceContainer .cadence p .fa {
+  margin-right: 10px;
+}
+.x-team-projects .cadenceContainer .activeCadence {
+  border-color: #4801FF;
+  background: rgba(72, 1, 255, 0.1);
+}
+.x-team-projects .cadenceContainer .overdueCadence {
+  border-color: #FF0000 !important;
+  background: rgba(255, 0, 0, 0.1) !important;
+}
+.x-team-projects .cadenceContainer .overdueCadenceIcon {
+  background: #FF0000 !important;
+}
+.x-team-projects .cadenceContainer .completedCadence {
+  border-color: #00ac04 !important;
+  background: rgba(0, 174, 4, 0.1);
+}
+.x-team-projects .projectMember {
+  padding: 10px 10px;
+  border-radius: 150px;
+  border: 1px solid #4801FF;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  font-size: 12px;
+  font-weight: bold;
+  color: #4801FF;
+}
+.x-team-projects .projectMember .fa {
+  color: #4801FF;
+  text-align: right;
+}
+.x-team-projects .projectMember p {
+  padding: 0px;
+  margin: 0px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #4801FF;
+  text-align: center;
+}
+.x-team-projects .memberTaskCount {
+  color: #a0a0a0;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: right;
+}
+.x-team-projects .projectMember:not(.disabled):hover {
+  background: #D90000;
+  color: #ffffff;
+  border-color: #D90000;
+}
+.x-team-projects .projectMember.disabled:hover {
+  background: #ccc;
+  color: #333 !important;
+  border-color: #333;
+  opacity: 0.5;
+}
+.x-team-projects .projectMember.disabled:hover p {
+  color: #333 !important;
+}
+.x-team-projects .projectMember.disabled:hover img {
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.x-team-projects .no_click:hover {
+  background: #ffffff !important;
+  color: #4801FF !important;
+  border-color: #4801FF !important;
+}
+.x-team-projects .projectMember:not(.disabled):hover p {
+  color: #ffffff !important;
+}
+.x-team-projects .projectMemberAdd {
+  padding: 10px 10px;
+  border-radius: 150px;
+  border: 1px solid #4801FF;
+  width: 110px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer !important;
+}
+.x-team-projects .projectPercentage {
+  display: none;
+  font-size: 33px;
+  padding-top: 32px;
+  border-radius: 50%;
+  height: 105px;
+  background: transparent;
+  width: 105px;
+  color: #ffffff;
+  margin-top: 2px;
+  text-align: center;
+  margin-right: 12px;
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+}
+.x-team-projects .activityLink {
+  color: #333;
+}
+.x-team-projects .activityLink:hover {
+  text-decoration: none;
+}
+.x-team-projects .home-activity {
+  overflow: scroll !important;
+  height: 410px;
+  overflow-y: auto;
+}
+.x-team-projects .home-activity .text {
+  color: #333;
+}
+.x-team-projects .home-activity .feed-item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: #00CC03;
+}
+.x-team-projects .activity-feed {
+  padding: 15px;
+  list-style: none;
+}
+.x-team-projects .activity-feed .feed-item {
+  position: relative;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  border-left: 2px solid #e4e8eb;
+  line-height: 18px !important;
+}
+.x-team-projects .activity-feed .feed-item .date {
+  display: block;
+  position: relative;
+  top: -5px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.x-team-projects .activity-feed .feed-item .text {
+  position: relative;
+  top: -3px;
+  color: #ffffff;
+}
+.x-team-projects .activity-feed .feed-item .text a {
+  color: #ffffff !important;
+}
+.x-team-projects .activity-feed .feed-item:last-child {
+  /* border-color: transparent;*/
+}
+.x-team-projects .activity-feed .feed-item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: #fff;
+}
+.x-team-projects .projectNotes {
+  background: #f1f1f1;
+  width: 100%;
+  height: 378px;
+  padding: 25px 25px 0px 25px;
+  border: 1px solid #eaeaea;
+  overflow: scroll;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.x-team-projects .projectNotes #printMessages {
+  padding: 25px 0px 0px 0px;
+}
+.x-team-projects .printFiles {
+  width: 100%;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+}
+.x-team-projects .printFiles .printFiles_header th {
+  font-weight: bold;
+  background: #f1f1f1;
+  padding: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: 1px solid #dedede;
+}
+.x-team-projects .printFiles .printActualFiles {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #eaeaea;
+}
+.x-team-projects .templates {
+  transition: all 0.3s ease;
+}
+.x-team-projects .templates .templateInfo {
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+  padding: 10px;
+}
+.x-team-projects .templates .templateInfo p {
+  text-align: center;
+  color: #ffffff;
+  clear: both;
+}
+.x-team-projects .deleteTemplate {
+  position: absolute;
+  color: #FF0000;
+  font-size: 25px;
+  margin-top: 60px;
+  right: 0;
+  margin-right: 10px;
+  background: #ffffff;
+  cursor: pointer;
+  z-index: 100;
+}
+.x-team-projects #templateMembersEdit .templateMembers {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 10px 5px 0px;
+}
+.x-team-projects #templateMembersEdit span {
+  display: block;
+  font-size: 12px;
+}
+.x-team-projects #templateMembersEdit div {
+  display: inline-block;
+  margin-right: 7px;
+  text-align: center;
+}
+.x-team-projects .templateTask {
+  border: 2px solid #4801FF;
+  width: 100%;
+  margin: 10px 0px 5% !important;
+  padding-bottom: 5px;
+}
+.x-team-projects .templateTask .formLabels {
+  display: inline;
+  padding-top: 10px !important;
+  float: left;
+}
+.x-team-projects .templateTask .remove {
+  float: right;
+  color: #FF0000 !important;
+  background: none !important;
+  border: 0px !important;
+  box-shadow: none !important;
+  font-size: 20px !important;
+  padding-top: 6px !important;
+  text-align: right;
+}
+.x-team-projects #editTemplate .templateRow {
+  border: 1px solid #4801FF;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=teamProjects.css.map */

@@ -1,0 +1,282 @@
+/* Variables */
+/* COLORS */
+/* Color Scheme */
+/* Statuses */
+/* MIXINS */
+.gradient {
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+}
+.gradient h1, .gradient h2, .gradient h3, .gradient h4, .gradient h5, .gradient h6, .gradient p, .gradient a {
+  color: #ffffff !important;
+}
+.gradient a {
+  text-decoration: underline;
+}
+
+.x-template-notebooks input[type=color] {
+  height: 42px;
+  padding: 1px 3px !important;
+}
+.x-template-notebooks #editNotebookColor {
+  background: #ffffff !important;
+  height: 22px !important;
+  width: 45px !important;
+  padding: 0px !important;
+}
+.x-template-notebooks .fullNotebookContainer {
+  height: 900px;
+  border: 2px solid #f1f1f1;
+}
+.x-template-notebooks .myNotebooksSidebarContainer {
+  border-right: 1px solid #f1f1f1;
+}
+.x-template-notebooks .myNotebooks, .x-template-notebooks .myPages {
+  display: inline-block;
+  width: 100%;
+  height: 95.5%;
+}
+.x-template-notebooks .changeSidebarWidth {
+  width: 50% !important;
+}
+.x-template-notebooks .changeSidebarWidth.expanded {
+  width: 70% !important;
+}
+.x-template-notebooks .changeSidebarWidth.shortened {
+  width: 30% !important;
+}
+.x-template-notebooks .tabIcon {
+  display: inline-block;
+  float: left;
+  border-right: 3px solid #000000;
+  height: 40px;
+  margin-right: 10px;
+}
+.x-template-notebooks .tabBox {
+  vertical-align: middle;
+  background: #000000;
+  border-radius: 3px;
+  width: 15px;
+  height: 34px;
+  margin-top: 3px;
+  margin-right: -3px;
+}
+.x-template-notebooks .notebookIcons {
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+  z-index: 1000;
+}
+.x-template-notebooks .notebookHeader {
+  text-align: center;
+  color: #ffffff;
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+  padding: 12px;
+}
+.x-template-notebooks #editNotebook, .x-template-notebooks #deleteNotebook, .x-template-notebooks #saveNotebook, .x-template-notebooks #cancelNotebook {
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 12px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+.x-template-notebooks #deleteNotebook {
+  color: #FF0000;
+  margin-right: 0px !important;
+}
+.x-template-notebooks #cancelNotebook {
+  color: #FF0000;
+  display: none;
+  margin-right: 0px !important;
+}
+.x-template-notebooks #saveNotebook {
+  color: #00ac04;
+  display: none;
+}
+.x-template-notebooks .tabBoxExpanded .sp-replacer {
+  margin-top: -4px !important;
+}
+.x-template-notebooks #editNotebookTitle {
+  width: 77px;
+  padding: 0px;
+  border-top: 0px !important;
+  border-right: 0px !important;
+  border-left: 0px !important;
+}
+.x-template-notebooks #editNotebookColor {
+  width: 65px;
+  padding: 0px;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.x-template-notebooks .tabBoxExpanded {
+  width: auto !important;
+  padding: 5.5px 4px !important;
+}
+.x-template-notebooks .shortenedTitle {
+  padding-left: 0px !important;
+  padding-bottom: 0px !important;
+}
+.x-template-notebooks .myNotebooks {
+  padding-left: 0px !important;
+}
+.x-template-notebooks .myPages {
+  float: right;
+  background: #f1f1f1;
+  display: none;
+}
+.x-template-notebooks .noteBookContainer, .x-template-notebooks .pageContainer, .x-template-notebooks #showPage {
+  cursor: pointer !important;
+  transition: all 0.3s ease;
+}
+.x-template-notebooks .noteBookContainer .title, .x-template-notebooks .pageContainer .title, .x-template-notebooks #showPage .title {
+  display: inline-block;
+  width: auto !important;
+  padding-left: 10px;
+  border-radius: 0px !important;
+  border: none !important;
+  text-align: left;
+}
+.x-template-notebooks .noteBookContainer .title h3, .x-template-notebooks .pageContainer .title h3, .x-template-notebooks #showPage .title h3 {
+  max-width: 178px !important;
+}
+.x-template-notebooks .noteBookContainer h3, .x-template-notebooks .pageContainer h3, .x-template-notebooks #showPage h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 125px;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  margin: 0px !important;
+  line-height: 1.5 !important;
+}
+.x-template-notebooks .pageContainer.active {
+  background: #d7d7d7;
+}
+.x-template-notebooks .noteBookContainer.active {
+  background: #f1f1f1;
+}
+.x-template-notebooks .noteBookContainer:hover {
+  background: #f1f1f1;
+}
+.x-template-notebooks .pageContainer .title {
+  padding: 10px;
+  transition: all 0.3s ease;
+  border-radius: 0px;
+}
+.x-template-notebooks .pageContainer .title:hover {
+  background: #d7d7d7;
+}
+.x-template-notebooks #savePage {
+  display: none;
+}
+.x-template-notebooks #cancelUpdatePage {
+  display: none;
+}
+.x-template-notebooks .searchNotebooksIcon, .x-template-notebooks .searchNotebooksInput, .x-template-notebooks .editNotebooks {
+  display: inline-block;
+  text-align: left;
+  cursor: pointer;
+  float: left;
+  margin-right: 5px;
+}
+.x-template-notebooks .searchNotebooksInput {
+  display: none;
+  border-top: 0px !important;
+  border-left: 0px !important;
+  border-right: 0px !important;
+  padding: 0px !important;
+  float: left;
+  width: 83%;
+  margin: -2px 0px !important;
+  color: #ffffff !important;
+}
+.x-template-notebooks .searchNotebooksInput::placeholder {
+  color: #ffffff !important;
+  opacity: 1;
+  font-size: 12px;
+}
+.x-template-notebooks .searchNotebooksInput:-ms-input-placeholder {
+  color: #ffffff !important;
+  font-size: 12px;
+}
+.x-template-notebooks .searchNotebooksInput::-ms-input-placeholder {
+  color: #ffffff !important;
+  font-size: 12px;
+}
+.x-template-notebooks .searchNotebooksInput:focus {
+  border-color: #ffffff !important;
+}
+.x-template-notebooks .highlight {
+  background-color: yellow !important;
+}
+.x-template-notebooks .editNotebooks, .x-template-notebooks .saveNotebooks {
+  font-size: 12px;
+  text-align: right;
+  float: right;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.x-template-notebooks .notebookOrderBy {
+  display: none;
+  color: #aaaaaa;
+  font-size: 18px;
+  float: right;
+  margin-right: 7px;
+  margin-top: 10px;
+}
+.x-template-notebooks .addNewNotebook {
+  bottom: 0;
+  background: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.x-template-notebooks .addNewPage {
+  bottom: 0;
+  background: #d7d7d7;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.x-template-notebooks .addNewNotebook button, .x-template-notebooks .addNewPage button {
+  background: none !important;
+  border: 0px !important;
+  color: #4801FF;
+}
+.x-template-notebooks #showPage {
+  display: none;
+}
+.x-template-notebooks #showPage .lastUpdated {
+  margin-top: 0px;
+}
+.x-template-notebooks #showPage .title {
+  text-align: left;
+  font-size: 24px;
+  margin: 0px 0px 10px;
+  border-bottom: 1px solid #ccc !important;
+  border-radius: 0px;
+}
+.x-template-notebooks #showPage .content {
+  margin-top: 25px;
+  max-height: 750px;
+}
+.x-template-notebooks #search, .x-template-notebooks #searchAll {
+  font-weight: bold;
+}
+.x-template-notebooks .noNotebook {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 20px;
+}
+.x-template-notebooks .noNotebook span {
+  font-size: 65px;
+  display: block;
+  font-weight: bold;
+}
+.x-template-notebooks #printNotebooksResults, .x-template-notebooks #printNotebookPagesResults {
+  clear: both;
+  display: block;
+}
+
+/*# sourceMappingURL=notebooks.css.map */

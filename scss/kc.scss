@@ -1,0 +1,144 @@
+@import "_defaults";
+
+.x-template-kc {
+	
+	#addTagsContainer {
+	display:none;
+	    width: auto;
+    clear: both;
+    margin:0px 14px;
+}
+#addTagsContainer input{
+	    margin-bottom: 0px !important;
+    width: 200px;
+}
+
+#printPostTags {
+	margin-bottom:10px;
+}
+	
+	
+.editTags {
+	background: #fff;
+    padding: 16px;
+    border: 2px solid $mutedPrimaryColor;
+    border-radius: 5px;
+    @include dropShadow;
+	display: inline;
+}
+.selectTags {
+	display:inline-block;
+	float:right;
+	
+	span {
+	color: $primaryColor;
+    text-decoration: underline;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 10px 12px;
+    display: inline-block;
+	cursor:pointer;
+}
+}
+	
+.deleteTagIcon {
+	color:$primaryColor;
+	margin-left:10px;
+	cursor:pointer;
+	transition: all 0.3s ease;
+	display:inline-block;
+}
+
+.deletedTag {
+	opacity: 0.6;
+    text-decoration: line-through;
+    background: #e0e0e0 !important;
+	
+	.deleteTagIcon{
+		color:$baseColor;
+	}
+	.addTagIcon {
+	display:none;
+	}
+}
+	
+.addTagIcon {
+	display:none;
+}
+
+.addedTag {
+	opacity: 1;
+    text-decoration: none;
+    background: $primaryColor !important;
+	color:#ffffff;
+	
+	.addTagIcon {
+	color:#ffffff;
+	margin-left:10px;
+	cursor:pointer;
+	display:inline-block;
+	transition: all 0.3s ease;
+}
+	
+	.deleteTagIcon {
+	display:none;
+}
+}
+
+
+
+.lastUpdated{font-size:12px; color:$thirdColor;font-style: italic;margin-top: -20px;
+    margin-bottom: 20px;}
+
+.clear {background: $status_new;color:#ffffff !important;}
+
+.blogPost {
+	border-bottom:1px solid #f1f1f1;padding:0px 0px 15px 0px;
+	.KCTags {
+	cursor: auto;
+}.date {color:$baseColor !important;}
+	
+	}
+
+
+
+.creatorInfo {
+	text-align: center;
+    margin-top: 23px;
+	a {color: $baseColor;}
+	a.primaryColorBG {color: #fff;}
+	h1 {
+	font-size:14px;
+	margin:0px;
+}
+	h3 {
+	font-size:14px;
+	margin:0px;
+	font-weight:bold;
+	text-align: center;
+	padding-bottom:15px;
+}
+	img {
+	    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+	@include dropShadow;
+}
+	.remove {
+	padding-top:10px;
+	margin-left: 0px;
+}
+	.remove.checkForConfirm {
+	padding: 7px;
+    margin-top: 17px;
+}
+	}
+
+
+
+
+	
+}

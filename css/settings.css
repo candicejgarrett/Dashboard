@@ -1,0 +1,64 @@
+/* Variables */
+/* COLORS */
+/* Color Scheme */
+/* Statuses */
+/* MIXINS */
+.gradient {
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+}
+.gradient h1, .gradient h2, .gradient h3, .gradient h4, .gradient h5, .gradient h6, .gradient p, .gradient a {
+  color: #ffffff !important;
+}
+.gradient a {
+  text-decoration: underline;
+}
+
+.x-template-settings .colorCode, .x-template-settings .colorCodeCalendarCategories, .x-template-settings .groupName {
+  cursor: pointer;
+}
+.x-template-settings .catManagementCreate {
+  display: none;
+}
+.x-template-settings .createNewContainer {
+  display: none;
+}
+.x-template-settings .settingsIcon {
+  padding: 40px 10px;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.3s ease;
+  -webkit-opacity: 0.99;
+  display: none;
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+}
+.x-template-settings .settingsIcon a {
+  color: #ffffff !important;
+  cursor: pointer;
+}
+.x-template-settings .settingsIcon i {
+  font-size: 40px;
+  padding-top: 20px;
+}
+.x-template-settings .settingsIcon:hover {
+  -webkit-box-shadow: 1px 10px 30px -20px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: 1px 10px 30px -20px rgba(0, 0, 0, 0.83);
+  box-shadow: 8px 10px 13px -21px rgba(0, 0, 0, 0.83);
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+.x-template-settings .col-sm-4 .settingsIcon h3 {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  font-size: 24px;
+}
+.x-template-settings .col-sm-3 .settingsIcon h3 {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=settings.css.map */

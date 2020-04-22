@@ -1,0 +1,269 @@
+@import "_defaults";
+
+.dataTable {
+	
+	width:100%;
+	border-collapse: collapse !important;
+
+	.sorting_desc,.sorting_asc {
+	background:#c3c9ff;
+	}
+	
+	thead th, thead td {
+    padding: 10px 18px !important;
+    border-bottom: 1px solid #111;
+	}
+	
+	thead tr th:last-child {
+		cursor:pointer;
+	}
+	
+	tbody tr.selected {
+	background:#eaecff !important;
+	color: #000;
+	font-weight: normal !important;
+	}
+	
+	th {
+		font-size:12px;
+		text-transform: uppercase;
+		text-align: center;
+		padding:10px;
+		margin:0px;
+		position: sticky;
+    	top: 0;
+		background: #f1f1f1;
+	}
+	td {
+		font-size:12px;
+		width:12.5%;
+		padding:10px
+		
+		p {
+			margin:0px;
+			padding:0px;
+			font-size:12px
+		}
+	}
+	td:not(:first-child) {
+		text-align: center;
+	}
+	tr {
+		border-spacing: 0em;
+		border:1px solid #f1f1f1;
+		transition:all 0.3s ease;
+	}
+	thead tr {
+	background: #f1f1f1;
+    color: #333;
+	}
+	tbody tr:not(#moreInfo):hover {
+			background:#f1f1f1;
+	}
+	tbody tr:not(#moreInfo):hover .taskStatus,.selected .taskStatus {
+			background:#ffffff !important;
+	}
+	tbody tr td.selected {
+	    background-color: #dee7f7;
+	}
+
+	.denied:hover {
+	cursor: not-allowed;
+	}
+	
+	 h1 {
+	font-size:16px;
+	margin:0px;
+	padding:5px 0px;
+	}
+	h2 {
+	font-size:14px;
+	margin:0px;
+	padding:0px;
+	font-style: italic;
+	}
+	h3 {
+	font-size:12px;
+	margin:0px;
+	padding:0px;
+	}
+	p {
+	font-size:12px;
+	margin:0px;
+	padding:0px;
+	}
+	
+	div[class*="todoStatus_"] {
+	padding: 4px 11px !important;
+    color: #ffffff !important;
+    font-size: 10px !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+    width: 80% !important;
+    margin: 0 auto !important;
+    border-radius: 1px !important;
+    text-align: center !important;
+	}
+	
+	div[class*="todoStatus_"] + span {
+	margin-top: 5px;
+	display:block;
+	}
+	
+	.previewImage {
+	max-height: 50px;
+	}
+	
+	input[type=checkbox]{
+	    text-align: center;
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+    width: 13px;
+	}
+	
+	.taskStatus {
+	    margin: 6px 0px;
+		display: inline-block;
+		width: auto;
+	}
+
+}
+
+.dataTable:not(.noSingleClick) tbody tr {
+	    cursor:pointer;
+	transition:all 0.3s ease;
+}
+
+
+#printBack_length select,#printBack2_length select{
+	    width: auto !important;
+    border: 1px solid #aaa !important;
+    background: none !important;
+    margin-bottom: 0px !important;
+    padding: 0px 0px 0px 8 !important;
+    text-align: center;
+}
+
+.dataTables_filter{
+	float: left !important;
+    clear: both;
+    padding-top: 4px;
+}
+
+.dataTables_filter label {
+text-align: left;}
+
+.dataTables_wrapper .dataTables_filter input{
+	margin-left:0px !important;
+	padding:4px;
+	font-size:12px !important;
+}
+
+.dataTables_length{
+	clear: both;
+    margin-top: 25px;
+}
+
+.dataTables_paginate .paginate_button.current {
+	
+    color: #ffffff !important;
+    padding: 1px 11px !important;
+    font-weight: bold !important;
+}
+
+.ripple {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(5, 0, 194, 0.4);
+  transform: scale(0);
+  position: absolute;
+  opacity: 1;
+z-index:30000;
+}
+.rippleEffect {
+    animation: rippleDrop .6s linear;
+}
+
+
+
+.selectedMenu {
+  width: 200px;
+  height: auto;
+  background: #ffffff;
+  position: absolute;
+  opacity: 1;
+z-index:18;
+	transition:all 0.3s ease;
+	@include dropShadow;
+-webkit-animation: fadeInUp 0.3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadeInUp 0.3s; /* Firefox < 16 */
+        -ms-animation: fadeInUp 0.3s; /* Internet Explorer */
+         -o-animation: fadeInUp 0.3s; /* Opera < 12.1 */
+            animation: fadeInUp 0.3s;
+font-size:12px !important;
+}
+
+.selectedMenu ul {
+	margin: 0px;
+    padding: 0px;
+    list-style-type: none;display:block;
+}
+
+.selectedMenu ul li {
+	margin: 0px;
+   padding: 8px;
+	border: 1px solid #f1f1f1;
+	transition:all 0.3s ease;
+	cursor: pointer;
+}
+
+.selectedMenu ul li:hover {
+	background:#f1f1f1;
+}
+
+.selectedMenu .heading {
+	background: #333;
+    width: 100%;
+    height: 28px;
+}
+.selectedMenu #closeMenu, #closeMoreInfo {
+	color:#ccc;
+	float:right;
+	padding:5px;
+	font-size: 18px;
+    cursor: pointer;
+	
+	
+}
+.selectedMenu h3{display:inline-block; float:left;padding: 8px;color:#ffffff;font-size:12px; font-weight:bold;margin:0px;}
+
+#moreInfo {
+	
+}
+
+.selectedMenu .secondaryMenu {
+	    text-align: right;
+		background:#f1f1f1;
+	display:none;
+	transition:all 0.3s ease;
+
+}
+
+.selectedMenu .secondaryMenu input,.selectedMenu .secondaryMenu select {
+	    background:#ffffff !important;
+	    padding: 0px 5px !important;
+}
+
+.secondaryMenu textarea {
+	    background: #ffffff !important;
+    padding: 5px !important;
+    line-height: 14px !important;
+}
+
+.selectedMenu .secondaryMenu .genericbtn {
+	    font-size: 12px !important;
+    text-transform: uppercase !important;
+	    padding: 0px 18px !important;
+}
+

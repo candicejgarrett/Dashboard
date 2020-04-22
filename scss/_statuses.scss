@@ -1,0 +1,286 @@
+@import "_defaults";
+
+/* TASK/REVIEW/PROJECT STATUS */
+
+.New,.Pending,.Completed,.Stage,.Approved {text-transform:uppercase;font-weight:bold;}
+
+.todoStatus_Incomplete,.todoStatus_New,.todoStatus_Not{
+	background:$status_new !important;
+}
+
+.todoStatus_Complete,.todoStatus_Completed,.projectsTable .todoStatus_Approved{
+	background:$status_complete;
+}
+.todoStatus_In,.todoListTable .todoStatus_Not{
+	background:$status_inreview !important;
+}
+.todoStatus_Approved{
+	background:$status_approved !important;
+}
+.myAssignedTasks .todoStatus_Approved, .myTasksTable .todoStatus_Approved{
+	background:$status_approved !important;
+}
+
+.todoStatus_Archived{
+	background:#636363 !important;
+}
+
+
+div[class*=".todoStatus_"]{
+	padding: 5px 15px !important;
+    color: #ffffff !important;
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+    width: 80% !important;
+    margin: 0 auto !important;
+    border-radius: 3px !important;
+	text-align: center !important;
+	
+	a {
+		color: #fff;
+	}
+}
+
+
+.taskStatus {
+	text-transform: uppercase;
+    padding: 3px 15px;
+    border-radius: 50px !important;
+    font-weight: bold;
+    font-size: 11px;
+    box-shadow: none !important;
+    height: auto !important;
+    transition: all 0.3s ease;
+    
+}
+
+.cadence .taskStatus {
+	text-align: center;
+	float:right;
+	background:#ffffff !important;
+}
+
+.taskStatus.New,.taskStatus.Not,.taskStatus.Incomplete,.statusSelectorContainer .statusSelector[status="New"]:hover,.statusSelectorContainer .statusSelector[status="New"].active {
+	border: 1px solid $status_new;
+	background: $status_new_bg;
+    color: $status_new;
+}
+
+.taskStatus.Archived {
+	border: 1px solid $status_archived_bg;
+	background: $status_archived_bg;
+    color: $status_archived_bg;
+}
+
+.taskStatus.In,.statusSelectorContainer .statusSelector[status="In Review"]:hover,.statusSelectorContainer .statusSelector[status="In Review"].active {
+	border: 1px solid $status_inreview;
+	background: $status_inreview_bg;
+    color: $status_inreview;
+}
+
+.taskStatus.Approved:not(.Not),.statusSelectorContainer .statusSelector[status="Approved"]:hover,.statusSelectorContainer .statusSelector[status="Approved"].active {
+	border: 1px solid $status_approved;
+	background: $status_approved_bg;
+    color: $status_approved;
+}
+
+.taskStatus.Completed,.taskStatus.Complete,.statusSelectorContainer .statusSelector[status="Completed"]:hover,.statusSelectorContainer .statusSelector[status="Completed"].active {
+	border: 1px solid $status_complete;
+	background: $status_complete_bg;
+    color: $status_complete;
+}
+
+
+/* TIMELINE STATUS */
+.timelineStatus:empty {
+	display:none;
+}
+
+.timelineStatus {
+	 display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
+	margin-top: 7px;
+	height:14px;
+}
+
+
+.red {
+	color:$status_new !important;
+} 
+
+.grey {
+	color:$status_archived !important;
+}
+.green {
+	color:$status_complete !important;
+}
+.orange {
+	color:$status_inreview_lite !important;
+}
+
+.green_bg {
+	background:$status_complete !important;
+}
+.orange_bg {
+	background:$status_inreview_lite !important;
+}
+
+.red_bg {
+	background:$status_new !important;
+}
+
+
+/* LHN MEGANAV */
+.srContainer .srHeading.srInProcess {
+	border-top: 4px solid $status_new;
+}
+.srContainer .srHeading.srApproved {
+	border-top: 4px solid $status_inreview_lite;
+}
+.srContainer .srHeading.srLive {
+	border-top: 4px solid $status_complete;
+}
+
+.lhnStatus.inProcessLHN {
+	background:$status_new;
+	color:#ffffff;
+}
+
+.lhnStatus.approvedLHN {
+	background:$status_inreview_lite;
+	color:#ffffff;
+}
+
+.lhnStatus.liveLHN {
+	background:$status_complete;
+	color:#ffffff;
+}
+
+
+.dotWack {
+	width: 8px;
+    height: 8px;
+    background: $status_complete;
+    border-radius: 50px;
+    display: inline-block;
+    margin-right: 6px;
+   
+}
+
+.revApproved,.revNotApproved {
+	@include dropShadow;
+	font-size: 20px;
+	position: absolute;
+	border-radius: 144px;
+    border: 1px solid #ffffff;
+	background: #ffffff;
+    
+}
+
+.revApproved {
+	 color: $status_complete;
+	
+	
+}
+.revNotApproved {
+	color: $status_new;
+}
+
+
+.online {
+	    font-size: 14px;
+    font-weight: bold;
+}
+.online-icon {
+	    float: right;
+    margin-left: 10px;
+border-radius:50%;
+display:inline-block;
+	width:20px;
+	height:20px;
+background: #42e22d; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, #42e22d 0%, #2c991e 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, #42e22d 0%,#2c991e 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, #42e22d 0%,#2c991e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#42e22d', endColorstr='#2c991e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	-webkit-box-shadow: 0px 0px 11px 0px rgba(30,255,0,0.9) !important;
+    -moz-box-shadow: 0px 0px 11px 0px rgba(30,255,0,0.9) !important;
+    box-shadow: 0px 0px 11px 0px rgba(30,255,0,0.9) !important;
+}
+
+.offline-icon {
+	    float: right;
+    margin-left: 10px;
+border-radius:50%;
+display:inline-block;
+	width:20px;
+	height:20px;
+background: #ff0000; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%, #a80000 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,#a80000 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, #ff0000 0%,#a80000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#a80000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+-webkit-box-shadow: 0px 0px 11px 0px rgba(255,0,0,0.9) !important;
+    -moz-box-shadow: 0px 0px 11px 0px rgba(255,0,0,0.9) !important;
+    box-shadow: 0px 0px 11px 0px rgba(255,0,0,0.9) !important;
+}
+
+
+.redAlert,.greenAlert {
+	padding: 15px;
+	border-radius: 9px;
+	margin-bottom:15px;
+	@include dropShadow;
+	-webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+	-webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+.redAlert {
+	
+    background-image: linear-gradient(-225deg, #ff0000 0%, #d30000 100%);
+
+}
+
+.greenAlert {
+	background-image: linear-gradient(-225deg, #00cc3c 0%, #00ae33 100%);
+   
+}
+
+
+.redAlert.greenAlert {
+	h1{
+	    margin: 0px;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0px 5px 5px 0px;
+	font-weight: bold;
+}
+	p{
+	    margin: 0px;
+    font-size: 14px;
+    color: #ffffff;
+}
+} 
+
+
+/* TICKETS */
+.individualTickets {
+	.ticketStatus.Incomplete {
+	background: $status_new;
+	}
+	.ticketStatus.In {
+	background: $status_inreview_lite;
+	height: auto !important;
+	}
+	.ticketStatus.Complete {
+	background: $status_complete;
+	}
+} 
+
+

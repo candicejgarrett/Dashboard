@@ -1,0 +1,81 @@
+.accordionHeader {
+	transition:all 0.3s ease;
+
+	.expandIcon, .collapseIcon {
+	display:none;
+	transition:all 0.3s ease;
+	color:#ffffff;
+	}
+}
+.accordionHeader:not(.special) {
+	background:$mutedPrimaryColor;
+	color:$primaryColor;
+	font-size:16px;
+	cursor:pointer;
+	
+	h3{
+	font-size:16px;
+	display:inline-block;
+	margin:0px;
+	padding:10px;
+	text-transform: uppercase;
+	font-weight:bold;
+}
+	.expandIcon {
+	display:inline-block;
+	transition:all 0.3s ease;
+	color:$primaryColor;
+	float: right;
+    padding: 10px 10px 15px 15px;
+}
+
+}
+
+.accordionHeader.active:not(.special) {
+	.expandIcon {
+	display:none;
+	}
+}
+
+
+.accordionHeader.active {
+	background:$primaryColor;
+	color:#ffffff;
+	font-size:16px;
+	cursor:pointer;
+	
+	h3{
+	font-size:16px;
+	display:inline-block;
+	margin:0px;
+	padding:10px;
+	text-transform: uppercase;
+	font-weight:bold;
+}
+	
+	.collapseIcon {
+	display:inline-block;
+	transition:all 0.3s ease;
+	color:#ffffff;
+	float: right;
+    padding: 10px 10px 15px 15px;
+}
+	.expandIcon {
+	display:inline-block;
+}
+}
+
+
+.accordionContent{
+	display:none;
+	padding: 15px 10px;
+	border-left: 1px solid $primaryColor;
+	border-right: 1px solid $primaryColor;
+	border-bottom: 1px solid $primaryColor;
+	width:100%;
+	
+	.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+	margin-top:0px;
+}
+}
+

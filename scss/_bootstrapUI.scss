@@ -1,0 +1,38 @@
+@import "_defaults";
+
+.ui-sortable-helper {
+	border:2px dotted #4801FF !important;
+	background:#ffffff !important;
+    color: #ffffff !important;
+	font-weight: bold !important;
+	-webkit-box-shadow: 1px 10px 30px -20px rgba(0,0,0,0.93) !important;
+    -moz-box-shadow: 1px 10px 30px -20px rgba(0,0,0,0.93) !important;
+    box-shadow: 1px 10px 30px -20px rgba(0,0,0,0.93) !important;
+
+}
+
+.ui-timepicker-div {
+	.ui-widget-header { margin-bottom: 8px; }
+	dl { 
+		text-align: left; 
+	
+		dt { height: 25px; margin-bottom: -25px; }
+		dd { margin: 0 10px 10px 65px; }
+		td { font-size: 90%; }
+	}
+}
+
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+.ui-timepicker-rtl{ 
+	direction: rtl; 
+	dl { text-align: right; }
+	dd { margin: 0 65px 10px 10px; }
+}
+
+.ui-state-highlight{
+	height:15px;
+	background:#f6ed00 !important;
+}
+
+
+  

@@ -1,0 +1,331 @@
+@import "_defaults";
+
+.x-template-notebooks {
+	
+	
+input[type="color"] {
+	    height: 42px;
+    padding: 1px 3px !important;
+}
+
+#editNotebookColor {
+	    background: #ffffff !important;
+    height: 22px !important;
+    width: 45px !important;
+    padding: 0px !important;
+}
+
+.fullNotebookContainer {
+	height:900px;
+	border: 2px solid #f1f1f1;
+}
+
+.myNotebooksSidebarContainer {
+	    border-right: 1px solid #f1f1f1;
+}
+
+.myNotebooks,.myPages { 
+	display: inline-block;
+width:100%;
+	    height: 95.5%;
+}
+
+.changeSidebarWidth {
+	width:50% !important;
+}
+
+.changeSidebarWidth.expanded {
+	width:70% !important;
+}
+
+.changeSidebarWidth.shortened {
+	width:30% !important;
+}
+
+.tabIcon {
+	    display: inline-block;
+    float: left;
+    border-right: 3px solid #000000;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.tabBox {
+vertical-align: middle;
+    background: #000000;
+    border-radius: 3px;
+    width: 15px;
+    height: 34px;
+    margin-top: 3px;
+    margin-right: -3px;
+}
+.notebookIcons {
+	    display: inline-block;
+    float: right;
+    margin-right: 10px;
+	z-index:1000;
+}
+
+.notebookHeader {
+	    text-align: center;
+    color: #ffffff;
+    @include primaryGradientBG;
+    padding: 12px;
+}
+
+
+#editNotebook, #deleteNotebook, #saveNotebook, #cancelNotebook {
+display: inline-block;
+    font-size: 16px;
+    margin-right: 12px;
+    padding-top: 10px;
+	cursor:pointer;
+
+}
+#deleteNotebook {
+	color:$status_new;
+	margin-right: 0px !important;
+}
+
+#cancelNotebook {
+	color:$status_new;
+	display:none;
+	 margin-right: 0px !important;
+}
+
+#saveNotebook {
+	color:$status_complete;
+	display:none;
+	   
+}
+
+.tabBoxExpanded .sp-replacer {
+  margin-top: -4px !important;
+}
+
+#editNotebookTitle {
+	    width: 77px;
+    padding: 0px;
+    border-top: 0px !important;
+    border-right: 0px !important;
+    border-left: 0px !important;
+}
+#editNotebookColor {
+	    width: 65px;
+    padding: 0px;
+   border-color: #ffffff;
+	color:#ffffff;
+}
+
+.tabBoxExpanded {
+	width:auto !important;
+    padding: 5.5px 4px !important;}
+
+.shortenedTitle {
+	padding-left:0px !important;
+	    padding-bottom: 0px !important;
+}
+
+
+.myNotebooks {
+	padding-left: 0px !important;
+}
+
+.myPages {
+	float:right;
+	    background: #f1f1f1;
+	display:none;
+	
+}
+
+.noteBookContainer,.pageContainer,#showPage {
+		cursor:pointer !important;
+		transition:all 0.3s ease;
+	
+		.title {
+			display:inline-block;
+			width: auto !important;
+				padding-left: 10px;
+			border-radius:0px !important;
+			border:none !important;
+			text-align: left;
+			h3 {
+				max-width: 178px !important;
+			}
+		}
+	
+		h3 {
+			overflow: hidden;
+			white-space: nowrap;
+			max-width: 125px;
+			text-overflow: ellipsis;
+			font-size: 14px;
+			margin: 0px !important;
+			line-height: 1.5 !important;
+		}
+}
+
+.pageContainer.active{
+	background:#d7d7d7;
+}
+
+.noteBookContainer.active{
+	background:#f1f1f1;
+}
+.noteBookContainer:hover {
+	background:#f1f1f1;
+}
+
+.pageContainer .title {
+	padding:10px;
+	transition:all 0.3s ease;
+	border-radius:0px;
+}
+
+.pageContainer .title:hover {
+	background:#d7d7d7;
+}
+
+#savePage {
+	display:none;
+}
+
+#cancelUpdatePage {
+	display:none;
+}
+
+.searchNotebooksIcon,.searchNotebooksInput,.editNotebooks {
+	display:inline-block;
+	text-align: left;
+	cursor:pointer;
+	float: left;
+	margin-right:5px;
+}
+.searchNotebooksInput {
+	display:none;
+	    border-top: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+    padding: 0px !important;
+    float: left;
+    width: 83%;
+    margin: -2px 0px !important;
+	color:#ffffff !important;
+}
+
+.searchNotebooksInput::placeholder{
+	color:#ffffff !important;
+	opacity: 1;
+	font-size:12px;
+}
+
+.searchNotebooksInput:-ms-input-placeholder{
+	color:#ffffff !important;
+	font-size:12px;
+}
+
+.searchNotebooksInput::-ms-input-placeholder{
+	color:#ffffff !important;
+	font-size:12px;
+}
+
+.searchNotebooksInput:focus {
+	 border-color: #ffffff !important;
+}
+
+.highlight {
+  background-color: yellow !important;
+}
+
+.editNotebooks,.saveNotebooks {
+font-size:12px;
+	text-align: right;
+	float:right;
+	text-transform: uppercase;
+	cursor:pointer;
+}
+
+.notebookOrderBy {
+	display:none;
+	    color: #aaaaaa;
+    font-size: 18px;
+    float: right;
+    margin-right: 7px;
+    margin-top: 10px;
+}
+
+.addNewNotebook {
+	bottom: 0;
+    background: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+	margin-bottom:10px;
+	
+	
+}
+
+
+.addNewPage {
+	bottom: 0;
+    background: #d7d7d7;
+    text-align: center;
+    padding: 10px;
+	margin-bottom:10px;
+}
+
+	.addNewNotebook,.addNewPage {
+		button{
+	    background: none !important;
+    border: 0px !important;
+	color:$primaryColor;
+	}
+}
+
+#showPage {
+	display:none;
+}
+
+#showPage .lastUpdated {
+	margin-top:0px;
+}
+
+	#showPage {
+		.title {
+	    text-align: left;
+    font-size: 24px;
+    margin:0px 0px 10px;
+	    border-bottom: 1px solid #ccc !important;
+    border-radius: 0px;
+}
+		.content {
+	margin-top:25px;
+	    max-height: 750px;
+}
+	} 
+
+
+
+#search,#searchAll {
+	font-weight:bold;
+}
+
+.noNotebook {
+	    text-align: center;
+    margin-top: 25px;
+    font-size: 20px;
+	
+	span {
+	font-size: 65px;
+	display:block;
+	font-weight:bold;
+}
+}
+
+
+
+#printNotebooksResults,#printNotebookPagesResults{
+	    clear: both;
+    display: block;
+}
+
+}

@@ -1,0 +1,189 @@
+@import "_defaults";
+
+.x-template-home {
+	
+
+	.dragOverflow{
+		.prev, .next {
+	    	font-size: 13px;
+			clear: both;
+			display: inline-block;
+			cursor: pointer;
+			
+			span {
+					font-size: 14px;
+				margin:0px 10px;
+				display: inline-block;
+				cursor: pointer;
+			}
+			
+			.fa {
+				display: inline-block;
+			}
+		}
+		
+		.prev {
+			text-align: left;
+			width: 50%;
+		}
+		.next {
+			text-align: right;
+			width: 49%;
+		}
+
+	
+	} 
+	
+	
+	.dragContainer {
+		overflow:scroll;
+		
+		.projectHorzScroll {
+			clear:both;
+			margin-top:15px;
+			
+			.projectBox {
+				width:300px;
+				background: #ffffff;
+				padding:15px;
+				color: $baseColor;
+				display: none;
+				margin-right: 25px;
+			
+				a{
+					text-decoration: none !important;
+					color:$baseColor !important;
+					
+					:hover{
+						text-decoration: none !important;
+						color:inherit;
+					}
+				}
+			
+				a.activeProjViewAll {
+					display: inline-block;
+					vertical-align: middle;
+					text-align: center;
+					font-size: 24px;
+					height: 65px;
+					margin-top: -101px;
+					color:#ffffff;
+				}
+
+				a.activeProjViewAll:hover {
+					color:#fff;
+				}
+				.name{
+					font-size:18px;
+					display: inline-block;
+					max-width: 276px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+				.description{
+					font-size:13px;
+					font-style: italic;
+					padding: 5px 0px 10px;
+					opacity: 0.7;
+					width: 267px;
+				  white-space: nowrap;
+				  overflow: hidden;
+				  text-overflow: ellipsis;
+					height: 33px;
+				}
+				
+				.percent{
+					font-size:12px;
+					span{
+						font-weight:bold;
+					}
+					
+				}
+				
+				.progressBar-container{
+					margin-top:4px !important;
+				}
+				
+				.deadline{
+					background: #f1ebff;
+					margin-top: 15px;
+					padding: 10px;
+					width: 73%;
+					border-radius: 3px;
+					
+					h3, .fa {
+						color: #b294ff !important;
+						display:inline-block;
+					}
+					
+					.fa{
+						margin-right:8px;
+					}
+					h3{
+						
+						font-size: 16px;
+						margin: 0px;
+						font-weight:bold;
+						
+						span{
+							color:$baseColor;
+						}
+					}
+
+				}
+				.deadline.lateProject {
+					background: $status_new_bg;
+					color:$status_new;
+					
+					h3, .fa {
+						color: $status_new !important;
+					}
+				}
+			
+			
+			
+			}
+			
+		}
+	}
+	
+
+
+	
+.doesntExist {
+	margin-top:15px; 
+	font-style: italic;
+}	
+	
+
+#upcomingEvents .fc-toolbar .fc-center h2{
+	    padding: 40px 0px 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.dataTable {
+	
+	.taskStatus {
+			margin: 6px 0px;
+		display: inline-block;
+		width: auto;
+	}
+	
+}
+
+#printFullTodoList {
+	display:none;
+	
+	#printBackFullTodoList_filter {
+		display:none;
+	}
+}
+
+
+	.noTasksDue {
+		display:none;
+	}	
+	
+}

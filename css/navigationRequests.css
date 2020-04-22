@@ -1,0 +1,546 @@
+/* Variables */
+/* COLORS */
+/* Color Scheme */
+/* Statuses */
+/* MIXINS */
+.gradient {
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+}
+.gradient h1, .gradient h2, .gradient h3, .gradient h4, .gradient h5, .gradient h6, .gradient p, .gradient a {
+  color: #ffffff !important;
+}
+.gradient a {
+  text-decoration: underline;
+}
+
+.x-template-navRequests {
+  /* LHN */
+}
+.x-template-navRequests .srContainer {
+  background: #dee2ff;
+  padding: 0px 0px 15px;
+}
+.x-template-navRequests .srContainer .srHeading {
+  text-align: center;
+  background: #ffffff;
+  -webkit-box-shadow: 1px 10px 30px -20px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: 1px 10px 30px -20px rgba(0, 0, 0, 0.83);
+  box-shadow: 8px 10px 13px -21px rgba(0, 0, 0, 0.83);
+  border-left: 1px solid #dee2ff;
+  border-right: 1px solid #dee2ff;
+}
+.x-template-navRequests .srContainer .srHeading h3 {
+  text-align: center;
+  margin: 0px;
+  padding: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #858585;
+}
+.x-template-navRequests .srContainer .srContent {
+  padding: 15px;
+  max-height: 700px;
+  overflow: scroll;
+}
+.x-template-navRequests .srContainer .srContent .srItem {
+  background: #ffffff;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  -webkit-box-shadow: 1px 10px 30px -20px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: 1px 10px 30px -20px rgba(0, 0, 0, 0.83);
+  box-shadow: 8px 10px 13px -21px rgba(0, 0, 0, 0.83);
+  cursor: pointer;
+}
+.x-template-navRequests .srContainer .srContent .srItem .name {
+  font-weight: bold;
+}
+.x-template-navRequests .srContainer .srContent .srItem hr {
+  margin: 5px auto;
+}
+.x-template-navRequests #srMainContent {
+  display: none;
+}
+.x-template-navRequests .keyContainer {
+  padding: 10px;
+  border: 1px solid #858585;
+  float: right;
+  margin-left: 25px;
+  background: #ffffff;
+  -webkit-box-shadow: 1px 10px 30px -20px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: 1px 10px 30px -20px rgba(0, 0, 0, 0.83);
+  box-shadow: 8px 10px 13px -21px rgba(0, 0, 0, 0.83);
+}
+.x-template-navRequests #mobileNavContainer {
+  width: 415px;
+  height: 736px;
+  overflow: scroll;
+  border: 1px solid #000;
+  margin-top: 17px;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "San Francisco", "Roboto", "Fira Sans", "Segoe UI", sans-serif;
+  line-height: 24px;
+}
+.x-template-navRequests #mobileNavContainer .mobileNavHeader {
+  padding: 12px 16px;
+  background: #af003d;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+}
+.x-template-navRequests #mobileNavContainer .mobileNavHeader #back {
+  display: none;
+  float: left;
+  margin-left: -6px;
+  margin-top: -3;
+  margin-right: -25px;
+}
+.x-template-navRequests #mobileNavContainer .mobileNavHeader #back span {
+  font-size: 12px;
+  font-weight: 300;
+  display: block;
+}
+.x-template-navRequests #mobileNavContainer .mobileNavHeader #back .fa {
+  font-size: 12px;
+  font-weight: 300;
+}
+.x-template-navRequests #mobileNavContainer .mobileNavLinkContainer .fa {
+  float: right;
+  color: #af003d;
+  margin-top: 3px;
+}
+.x-template-navRequests #mobileNavContainer .mobileNavLinkContainer ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0px;
+  cursor: pointer;
+}
+.x-template-navRequests #mobileNavContainer .mobileNavLinkContainer ul li {
+  padding: 12px 12px;
+  box-shadow: inset 0 -0.5px 1px 0 rgba(166, 166, 166, 0.4);
+}
+.x-template-navRequests #mobileNavContainer .mobileNavLinkContainer ul li ul, .x-template-navRequests #mobileNavContainer .mobileNavLinkContainer ul li ul li ul, .x-template-navRequests #mobileNavContainer .mobileNavLinkContainer ul li ul li ul li ul {
+  display: none;
+}
+.x-template-navRequests #mobileNavContainer .mobileNavLinkContainer ul li ul li {
+  padding: 12px 10px;
+  margin-left: -13px;
+  margin-right: -13px;
+}
+.x-template-navRequests #mobileNavContainer .mobileNavLinkContainer ul li ul li ul li {
+  padding: 12px 10px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.x-template-navRequests #mobileNavContainer .mobileNavLinkContainer ul li ul li:first-child, .x-template-navRequests #mobileNavContainer .mobileNavLinkContainer ul li ul li ul li:first-child, .x-template-navRequests #mobileNavContainer .mobileNavLinkContainer ul li ul li ul li ul li:first-child {
+  padding-top: 0px;
+}
+.x-template-navRequests #printMegaNav .reorderHeadersDiv {
+  min-height: 50px;
+  border: 1px solid #0007FF;
+  padding: 0px 0px 15px 15px;
+  margin-top: 15px;
+}
+.x-template-navRequests #printMegaNav .addNewHeaderContainer {
+  margin-top: 25px;
+}
+.x-template-navRequests #printMegaNav .lhnMenuHeaderTitle {
+  color: #AF003D;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+  vertical-align: top;
+}
+.x-template-navRequests #printMegaNav .lhnMenuItemTitle, .x-template-navRequests #printMegaNav .lhnMenuItemLink {
+  color: #252525;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+.x-template-navRequests #printMegaNav .lhnMenuHeader {
+  margin-top: 0px !important;
+  border: none !important;
+}
+.x-template-navRequests .editable .lhnMenuItemTitle, .x-template-navRequests .editable .lhnMenuItemLink, .x-template-navRequests .editable .lhnMenuHeaderTitle {
+  cursor: pointer;
+}
+.x-template-navRequests .editable .lhnMenuItemTitle input, .x-template-navRequests .editable .lhnMenuItemLink input, .x-template-navRequests .editable .lhnMenuHeaderTitle input {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  padding: 0px 3px !important;
+  margin-top: 0px !important;
+}
+.x-template-navRequests .editable .lhnMenuItemTitle:hover, .x-template-navRequests .editable .lhnMenuItemLink:hover {
+  text-decoration: underline;
+}
+.x-template-navRequests .code {
+  background: #f1f1f1;
+  padding: 15px;
+  margin-bottom: 25px;
+  display: none;
+}
+.x-template-navRequests #lhnCode, .x-template-navRequests #megaNavCode {
+  background: #ffffff;
+  padding: 10px;
+  height: 200px;
+}
+.x-template-navRequests .newHeaderContainer {
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.x-template-navRequests #newMegaNavForm .newHeaderContainer {
+  border: 0px !important;
+  margin-top: 10px !important;
+  padding-top: 20px;
+}
+.x-template-navRequests .addHeaderBox {
+  font-weight: bold;
+  color: #4801FF;
+  cursor: pointer;
+  margin-top: 25px;
+}
+.x-template-navRequests .addLinkBox {
+  font-weight: bold;
+  color: #00ac04;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.x-template-navRequests .removeHeaderContainer, .x-template-navRequests .removeLinkContainer {
+  display: inline;
+  margin-left: 10px;
+  color: #FF0000;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.x-template-navRequests .removeHeaderContainer .fa, .x-template-navRequests .removeLinkContainer .fa {
+  font-size: 17px;
+}
+.x-template-navRequests .megaNavCollumn h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: underline;
+  margin-top: 25px;
+  margin-bottom: 0px;
+  padding-top: 20px !important;
+}
+.x-template-navRequests #collumn1 h4:first-child {
+  margin-top: 0px !important;
+  margin-bottom: -20px;
+}
+.x-template-navRequests #collumn1, .x-template-navRequests #collumn2, .x-template-navRequests #collumn3 {
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 20px;
+}
+.x-template-navRequests #printMegaNav #collumn1, .x-template-navRequests #printMegaNav #collumn2, .x-template-navRequests #printMegaNav #collumn3 {
+  vertical-align: top;
+}
+.x-template-navRequests #newLHNForm input, .x-template-navRequests #newMegaNavForm input {
+  width: 200px;
+  padding: 3px !important;
+  margin-top: 10px !important;
+  margin-bottom: 0px !important;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+  font-size: 12px !important;
+}
+.x-template-navRequests #newLHNForm .newLinkHref, .x-template-navRequests #newMegaNavForm .newLinkHref {
+  margin-left: 10px;
+}
+.x-template-navRequests #lhnSelection, .x-template-navRequests #newLHNForm, .x-template-navRequests #addHeaderInput, .x-template-navRequests #deleteLHNContainer, .x-template-navRequests #deleteMegaNavContainer, .x-template-navRequests #newMegaNavForm, .x-template-navRequests #updateMegaNavForm, .x-template-navRequests #updateLHNForm, .x-template-navRequests #exportTable {
+  display: none;
+}
+.x-template-navRequests .lhnStatus {
+  font-weight: bold;
+  width: auto;
+  display: block;
+  clear: both;
+  text-align: center;
+  padding: 5px;
+}
+.x-template-navRequests .lhnContainer.editable, .x-template-navRequests .lhnContainer.removeable, .x-template-navRequests .lhnContainer.reorderable, .x-template-navRequests .lhnContainer.reorderableHeaders, .x-template-navRequests .megaNavContainer.editable, .x-template-navRequests .megaNavContainer.removeable, .x-template-navRequests .megaNavContainer.reorderable, .x-template-navRequests .megaNavContainer.reorderableHeaders {
+  padding: 10px;
+  border: 1px solid #4801FF;
+}
+.x-template-navRequests #addNewHeader {
+  display: block;
+  width: 20%;
+}
+.x-template-navRequests #reorderHeaders {
+  margin-top: 20px;
+  width: 20%;
+}
+.x-template-navRequests #approveLink, .x-template-navRequests #approveHeader {
+  border: 1px solid #00ac04;
+  width: 30px;
+  text-align: center;
+  border-radius: 50px;
+  padding: 6px 0px;
+  margin-top: 10px;
+  float: right;
+  color: #00ac04;
+  cursor: pointer;
+}
+.x-template-navRequests #cancelLink, .x-template-navRequests #cancelHeader {
+  border: 1px solid #FF0000;
+  width: 30px;
+  text-align: center;
+  border-radius: 50px;
+  padding: 6px 0px;
+  margin-top: 10px;
+  float: right;
+  color: #FF0000;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.x-template-navRequests .addLinks {
+  background: #00ac04;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 5px 10px;
+  width: auto;
+  margin-top: 10px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+.x-template-navRequests #removeLinks {
+  background: #FF0000;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 5px 10px;
+  width: auto;
+  margin-top: 10px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  margin-left: 10px;
+}
+.x-template-navRequests #reorderLinks {
+  background: #4801FF;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 5px 10px;
+  width: auto;
+  margin-top: 10px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  margin-left: 10px;
+}
+.x-template-navRequests .cancelLinks {
+  background: #FF0000;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 5px;
+  width: 66px;
+  margin-top: 10px;
+  cursor: pointer;
+  text-align: center;
+  cursor: pointer;
+}
+.x-template-navRequests .addLinkContainer, .x-template-navRequests .addHeaderContainer {
+  width: 20%;
+  height: 100px;
+  display: none;
+}
+.x-template-navRequests .addLinkContainer input, .x-template-navRequests .editable input, .x-template-navRequests .addHeaderContainer input {
+  padding: 3px !important;
+  width: 100% !important;
+  margin-top: 10px !important;
+  margin-bottom: 0px !important;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+  font-size: 12px !important;
+}
+.x-template-navRequests #actions.moveUp {
+  margin-top: -48px;
+}
+.x-template-navRequests #actions {
+  text-align: left;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+.x-template-navRequests .updateTitleCTAs {
+  display: inline-block;
+}
+.x-template-navRequests .saveLHN {
+  background-color: #00ac04 !important;
+}
+.x-template-navRequests .saveLHNRequest {
+  margin-left: 25px;
+  background-color: #00ac04 !important;
+}
+.x-template-navRequests .cancelLHN {
+  margin-left: 25px;
+  background-color: #00ac04 !important;
+}
+.x-template-navRequests #cancelEditLHN {
+  margin-left: 10px;
+  background-color: #FF0000 !important;
+}
+.x-template-navRequests .cancelLHNRequest {
+  margin-left: 25px;
+  background-color: #FF0000 !important;
+}
+.x-template-navRequests .newLHNRequest {
+  background-color: #ff9933 !important;
+}
+.x-template-navRequests .setLHNLive {
+  background-color: #00ac04 !important;
+}
+.x-template-navRequests .removeThisLink, .x-template-navRequests .removeThisHeaderMenu {
+  display: inline-block;
+  color: #FF0000;
+  cursor: pointer;
+}
+.x-template-navRequests .reorderThisLink, .x-template-navRequests .reorderThisMenu {
+  display: inline-block;
+  color: #858585;
+  cursor: pointer;
+}
+.x-template-navRequests .lhnSelectionHeader, .x-template-navRequests .megaNavSelectionHeader {
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+  padding: 8px;
+  text-align: center;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  width: 150px;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.x-template-navRequests .key {
+  float: right;
+  font-size: 14px;
+}
+.x-template-navRequests .lhnTitle {
+  background-color: #efefef;
+  color: #252525;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 10px;
+  text-align: left;
+  text-transform: uppercase;
+  width: 20%;
+}
+.x-template-navRequests .lhnMenuHeader {
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.x-template-navRequests .lhnMenuHeader .lhnMenuHeaderTitle {
+  display: inline-block;
+  color: #333;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: left;
+  text-decoration: none;
+  width: 20%;
+  margin-right: 20px;
+  transition: all 0.3s ease;
+}
+.x-template-navRequests .lhnMenuHeaderLastUpdated {
+  display: inline-block;
+  color: #00ac04;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
+  line-height: 21px;
+  text-align: left;
+  text-decoration: none;
+  width: 40%;
+}
+.x-template-navRequests .newAdded.lhnMenuItemTitle, .x-template-navRequests .newAdded.lhnMenuItemLink, .x-template-navRequests .newAdded.lhnMenuHeaderTitle, .x-template-navRequests .lhnMenuItemTitle.updatedTitle, .x-template-navRequests .lhnMenuItemLink.updatedHref, .x-template-navRequests .lhnMenuHeaderTitle.updatedHeader, .x-template-navRequests .key .newAdded {
+  color: #00ac04 !important;
+  font-weight: bold;
+  background: #fff959;
+}
+.x-template-navRequests .removedStrike.lhnMenuItemTitle, .x-template-navRequests .removedStrike.lhnMenuItemLink, .x-template-navRequests .removedStrike.lhnMenuHeaderTitle, .x-template-navRequests .key .removedStrike {
+  color: #FF0000 !important;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+.x-template-navRequests .lhnMenuItemTitle.reordered, .x-template-navRequests .key .reordered {
+  border-left: 4px solid #4801FF;
+  border-right: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+.x-template-navRequests .lhnMenuItemContainer .lhnMenuItemTitle {
+  display: inline-block;
+  color: #666;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
+  line-height: 21px;
+  text-align: left;
+  text-decoration: none;
+  width: 20%;
+  margin-right: 20px;
+  transition: all 0.3s ease;
+}
+.x-template-navRequests .lhnMenuItemContainer .lhnMenuItemLink {
+  display: inline-block;
+  color: #666;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
+  line-height: 21px;
+  text-align: left;
+  text-decoration: none;
+  width: 40%;
+  margin-right: 20px;
+  word-break: break-all;
+  transition: all 0.3s ease;
+}
+.x-template-navRequests .lhnMenuItemContainer .lhnMenuItemTimestamp {
+  display: inline-block;
+  color: #00ac04;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
+  line-height: 21px;
+  text-align: left;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 32%;
+  text-align: right;
+}
+.x-template-navRequests .lhnMenuItemContainer .lhnMenuItemTimestamp span {
+  font-weight: bold;
+}
+.x-template-navRequests #loadLHNSettings .userTags {
+  cursor: unset !important;
+}
+.x-template-navRequests #loadLHNSettings .formLabels {
+  display: inline;
+  text-decoration: underline;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.x-template-navRequests .updateLHNContainer {
+  display: none;
+}
+.x-template-navRequests .updateLHNContainer .formLabels {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=navigationRequests.css.map */

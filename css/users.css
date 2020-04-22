@@ -1,0 +1,76 @@
+/* Variables */
+/* COLORS */
+/* Color Scheme */
+/* Statuses */
+/* MIXINS */
+.gradient {
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+}
+.gradient h1, .gradient h2, .gradient h3, .gradient h4, .gradient h5, .gradient h6, .gradient p, .gradient a {
+  color: #ffffff !important;
+}
+.gradient a {
+  text-decoration: underline;
+}
+
+.x-template-users #changeProfilePictureBtn {
+  position: absolute;
+  color: #ffffff;
+  margin-left: 68%;
+  margin-top: 220px;
+}
+.x-template-users #noUserPage {
+  display: none;
+}
+.x-template-users .largeRoundPP {
+  height: 100px;
+  width: 100px;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.x-template-users .userCardHeader {
+  padding: 15px;
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%) !important;
+  color: #ffffff !important;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.x-template-users .userCardHeader a {
+  color: #ffffff;
+}
+.x-template-users .userCardHeader a:hover {
+  color: #ffffff;
+}
+.x-template-users .userCardHeader h3 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.x-template-users .userCard {
+  background: #ffffff;
+  min-height: 315px;
+  margin-bottom: 15px;
+  border: 2px solid #eaeaea;
+}
+.x-template-users .userCard h5 {
+  font-weight: bold;
+  font-style: italic;
+  padding-top: 5px;
+}
+.x-template-users .userCard img {
+  width: 100%;
+}
+.x-template-users .userCard .viewMore {
+  border: 2px solid #e8eeff;
+  padding: 6px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  background: #ffffff;
+}
+.x-template-users .userCard .viewMore:active {
+  background-image: linear-gradient(to bottom, #dfe9f3 0%, white 100%);
+}
+
+/*# sourceMappingURL=users.css.map */

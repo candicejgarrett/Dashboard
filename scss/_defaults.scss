@@ -1,0 +1,67 @@
+/* Variables */
+
+/* COLORS */
+/* Color Scheme */
+$primaryColor: #4801FF;
+$secondaryColor: #AC32E4;
+$thirdColor: #7918f2;
+$mutedPrimaryColor: #dee2ff;
+$baseColor: #333;
+$mutedBaseColor: #858585;
+$superMutedBaseColor: #f1f1f1;
+
+/* Statuses */
+$status_new: #FF0000;
+$status_inreview: #DA6E00;
+$status_inreview_lite: #ff9933;
+$status_approved: #93c300;
+$status_complete: #00ac04;
+$status_archived: #636363;
+
+$status_new_bg: rgba(255, 0, 0, 0.1);
+$status_inreview_bg: rgba(255, 107, 0, 0.1);
+$status_approved_bg: rgba(147, 195, 0, 0.1);
+$status_complete_bg: rgba(0, 174, 4, 0.1);
+$status_archived_bg: rgba(99, 99, 99, 0.1);
+
+
+
+/* MIXINS */
+@mixin dropShadow {
+  -webkit-box-shadow: 1px 10px 30px -20px rgba(0,0,0,0.83);
+    -moz-box-shadow: 1px 10px 30px -20px rgba(0,0,0,0.83);
+    box-shadow: 8px 10px 13px -21px rgba(0,0,0,0.83);
+}
+
+@mixin primaryGradientBG {
+ background-image: linear-gradient(-225deg, $secondaryColor 0%, #7918F2 48%, $primaryColor 100%) !important;
+	color: #ffffff !important;
+}
+.gradient {
+	@include primaryGradientBG;
+	
+	h1, h2, h3, h4, h5, h6, p,a {
+    color: #ffffff !important;
+	}
+	
+	a {
+   	text-decoration:underline;
+	}
+	
+	
+	}
+
+@mixin zoomIn_Animation {
+	-webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+}
+
+@mixin fadeInUp_Animation{
+	
+}
+
+

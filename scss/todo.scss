@@ -1,0 +1,29 @@
+@import "_defaults";
+
+.x-template-todo {
+	.calendar_Overdue{
+	background: rgb(255,0,0, 0.2) !important;
+   color: #d40000 !important;
+    font-weight: 700 !important;
+}
+	
+	.calendar_Completed,.calendar_Complete{opacity:0.4 !important;transition: all 0.3s ease;}
+.calendar_Completed:hover,.calendar_Complete:hover{opacity:1 !important}
+
+	.accordionHeader {
+		width:50%;
+	}
+	
+	
+	.accordionContent {
+    width: 100%;
+    position: absolute;
+    background: #ffffff;
+    z-index: 50;
+	border-top: 1px solid #4801FF;
+	-webkit-box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.11);
+    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.11);
+}
+	
+}

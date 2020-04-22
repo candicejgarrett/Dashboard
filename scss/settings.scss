@@ -1,0 +1,36 @@
+@import "_defaults";
+
+.x-template-settings {
+	
+	.colorCode,.colorCodeCalendarCategories,.groupName {
+	cursor:pointer;
+	}
+	.catManagementCreate {
+	display: none;
+}
+	.createNewContainer {
+	display:none;
+}
+
+.settingsIcon {padding:40px 10px;color:#ffffff;text-align: center;transition: all 0.3s ease;-webkit-opacity: .99;display: none;@include primaryGradientBG;
+		
+		a {color:#ffffff !important;cursor:pointer;}
+		i {font-size:40px;padding-top:20px;}
+		}
+.settingsIcon:hover{
+	@include dropShadow;
+	-webkit-transform: translateY(-8px);
+  transform: translateY(-8px);}
+	
+	
+.col-sm-4 .settingsIcon h3 {text-align: center;margin:0px;padding:0px;font-size:24px;}
+.col-sm-3 .settingsIcon h3 {text-align: center;margin:0px;padding:0px;font-size:20px;}
+
+	
+	
+	
+	
+}
+	
+	
+	
