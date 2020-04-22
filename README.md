@@ -1,6 +1,6 @@
 <h1>Desktop Web App: Dashboard</h1><br>
 <strong>Created By:</strong> Candice J. Garrrett | Front-End Developer<br><br>
-<strong>Live preview:</strong> <a href="https://www.candicejgarrett.com/dashboard" target="_blank">candicejgarrett.com/dashboard</a>
+<strong>Live preview:</strong> <a href="https://www.candicejgarrett.com/dashboard" target="_blank">candicejgarrett.com/dashboard</a><br>
     <strong>Login Information:</strong>
       username: JohnD<br>
       password: Password1!
