@@ -383,50 +383,6 @@ function getKCPostInfo($postID) {
 	return $out;
 }
 
-function getLHNInfo($lhnID) {
-	global $connection;
-	
-	$getAll = "SELECT 
-	`lhnID`, 
-	`Title`, 
-	`Status`,
-	DATE_FORMAT(`Timestamp`, '%W, %b. %e, %Y @ %h:%i %p') AS 'Timestamp' 
-	FROM `Live LHNs` 
-	WHERE `lhnID` ='$lhnID'";
-	$getAll_result = mysqli_query($connection, $getAll) or die ("Query to get data from Team Project failed: ".mysql_error());
-	while($row = $getAll_result->fetch_assoc()) {
-        
-		$out["title"] = $row["Title"];
-		$out["status"] = $row["Status"]; 
-		$out["timestamp"] = $row["Timestamp"];
-
-	}
-	
-	return $out;
-}
-
-function getMeganavInfo($meganavID) {
-	global $connection;
-	
-	$getAll = "SELECT 
-	`meganavID`, 
-	`Title`, 
-	`Status`,
-	DATE_FORMAT(`Timestamp`, '%W, %b. %e, %Y @ %h:%i %p') AS 'Timestamp' 
-	FROM `Live MegaNavs` 
-	WHERE `meganavID` ='$meganavID'";
-	$getAll_result = mysqli_query($connection, $getAll) or die ("Query to get data from Team Project failed: ".mysql_error());
-	while($row = $getAll_result->fetch_assoc()) {
-        
-		$out["title"] = $row["Title"];
-		$out["status"] = $row["Status"]; 
-		$out["timestamp"] = $row["Timestamp"];
-
-	}
-	
-	return $out;
-}
-
 function getNewsfeed($newsfeedCount,$thisUserID) {
 	global $userID;
 	global $connection;
@@ -880,101 +836,6 @@ $removeThis = '';
 
 					}
 						
-					else if ($Type == "LHN") {
-						
-							$doesExist = "SELECT COUNT(*) FROM `Live LHNs` WHERE `lhnID` = '$lhnID'";
-							$doesExist_result = mysqli_query($connection, $doesExist) or die ("getTasks_result to get data from Team Project failed: ".mysql_error());
-							while($row = $doesExist_result->fetch_assoc()) {
-								$doesExist = $row["COUNT(*)"];
-							}
-						
-							if ($doesExist == 0) {
-								$moreInformation = '<p class="doesntExist">This LHN has been deleted.</p>';
-								$removeThis = 'style="display:none"';
-							}
-							else {
-								$removeThis = '';
-								$links ='
-							<li><a href="/dashboard/requests/lhn/?lhnID='.$lhnID.'">View LHN</a></li>
-							';
-								
-								
-							$lhnInfo = getLHNInfo($lhnID);	
-								
-							$projectTitle = $lhnInfo["title"];
-							$projectStatus = $lhnInfo["status"];
-							$projectDueDateDisplay = $lhnInfo["timestamp"];	
-								
-								
-							$moreInformation = '
-								
-								<h3>LHN Details</h3>
-								
-							<div class="row">
-									<div class="col-sm-6">
-									<div class="formLabels">Title:</div>
-										<p>'.$projectTitle.'</p>
-										
-										
-									</div>
-									<div class="col-sm-6">
-										<div class="formLabels">Status:</div>
-										<p>'.$projectStatus.'</p>
-										
-									</div>
-									
-								</div>
-							';
-							
-							}
-						}
-						
-					else if ($Type == "MegaNav") {
-						
-							$doesExist = "SELECT COUNT(*) FROM `Live MegaNavs` WHERE `meganavID` = '$meganavID'";
-							$doesExist_result = mysqli_query($connection, $doesExist) or die ("getTasks_result to get data from Team Project failed: ".mysql_error());
-							while($row = $doesExist_result->fetch_assoc()) {
-								$doesExist = $row["COUNT(*)"];
-							}
-						
-							if ($doesExist == 0) {
-								$moreInformation = '<p class="doesntExist">This MegaNav has been deleted.</p>';
-								$removeThis = 'style="display:none"';
-							}
-							else {
-								$removeThis = '';
-								$links ='
-							<li><a href="/dashboard/requests/meganav/?meganavID='.$meganavID.'">View MegaNav</a></li>
-							';
-							$meganavInfo = getMeganavInfo($meganavID);	
-								
-							$projectTitle = $meganavInfo["title"];
-							$projectStatus = $meganavInfo["status"];
-							$projectDueDateDisplay = $meganavInfo["timestamp"];	
-								
-								
-							$moreInformation = '
-								
-								<h3>Meganav Details</h3>
-								
-							<div class="row">
-									<div class="col-sm-6">
-									<div class="formLabels">Title:</div>
-										<p>'.$projectTitle.'</p>
-										
-										
-									</div>
-									<div class="col-sm-6">
-										<div class="formLabels">Status:</div>
-										<p>'.$projectStatus.'</p>
-										
-									</div>
-									
-								</div>
-							';
-						}
-					}
-					
 					else  {
 							
 							
@@ -1135,21 +996,6 @@ function getUserTagsNotInReview($searchTerm,$reviewID){
 	global $userID;
 	
 	$query ="SELECT DISTINCT `username`,`userID` FROM `user` WHERE `username` LIKE '%$searchTerm%' AND `userID` NOT IN (SELECT `userID` FROM `Tickets Review Members` WHERE `ReviewID` ='$reviewID') AND `userID` != '$userID'";
-	$query_result = mysqli_query($connection, $query) or die ("Query to get data from Team task failed: ".mysql_error());
-		
-	while ($row = mysqli_fetch_array($query_result)) {
-	$foundUsernames[] = "<div class='userTags' userID=".$row['userID'].">".$row['username']."</div>";
-
-	}
-	return $foundUsernames;
-}
-
-function getUserTagsNotInLHN($searchTerm,$lhnID){
-	global $connection;
-	global $userID;
-	
-	$query ="SELECT DISTINCT `username`,`userID` FROM `user` WHERE `username` LIKE '%$searchTerm%' AND `userID` != '$userID' AND `userID` NOT IN (SELECT `userID` FROM `Live LHN Permissions` WHERE `lhnID` ='$lhnID')";
-	
 	$query_result = mysqli_query($connection, $query) or die ("Query to get data from Team task failed: ".mysql_error());
 		
 	while ($row = mysqli_fetch_array($query_result)) {
