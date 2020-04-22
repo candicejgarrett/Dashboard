@@ -4,7 +4,7 @@
         session_start();
     } 
 
-$connection = mysqli_connect('127.0.0.1', 'garrettc1', 'Welcome1!');
+$connection = mysqli_connect('127.0.0.1', 'root', 'newpassword');
 date_default_timezone_set('America/New_York');
 
 
@@ -19,8 +19,8 @@ if (!$select_db){
 
 //PDO
 $servername = "127.0.0.1";
-$serverusername = "garrettc1";
-$serverpassword = "Welcome1!";
+$serverusername = "root";
+$serverpassword = "newpassword";
 $dbname = "dashboard";
 
 
