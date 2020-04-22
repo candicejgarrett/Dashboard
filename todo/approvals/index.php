@@ -280,7 +280,7 @@ $todaysDate = date("Y-m-d H:i:s",strtotime('today'));
 					<div class="col-sm-12">
 			
 				<div id="projectsTableContainer" class="table-responsive approvalsTable">
-				<table class="projectsTable myAssignedTasks" id="printBack">
+				<table class="projectsTable myAssignedTasks dataTable no-footer" id="printBack">
 					<thead>
 					<tr>
 						<th>Title</th>

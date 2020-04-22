@@ -476,7 +476,7 @@ $(document).ready(function() {
        <div class="col-sm-10" style="height: 100%;">
       <div class="row">
      	<div class="col-sm-12">
-			<?php include("../templates/alerts.php") ?>
+			<?php include("../../templates/alerts.php") ?>
 		</div>
 		</div>
      	<div class="row">

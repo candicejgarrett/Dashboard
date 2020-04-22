@@ -10,10 +10,12 @@ date_default_timezone_set('America/New_York');
 
 if (!$connection){
     die("Database Connection Failed" . mysqli_error($connection));
+	echo "failed db connection";
 }
 $select_db = mysqli_select_db($connection, 'dashboard');
 if (!$select_db){
     die("Database Selection Failed" . mysqli_error($connection));
+	echo "failed db connection";
 }
 
 
